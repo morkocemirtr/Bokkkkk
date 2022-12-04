@@ -1,0 +1,1889 @@
+"if game.PlaceId == 740581508 then
+
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+    local Window = OrionLib:MakeWindow({Name = "GRH.Example Entry Point", HidePremium = false, SaveConfig = false, ConfigFolder = "Boboh Shit"})
+
+    local Name = game.Players.LocalPlayer.Name
+
+    OrionLib:MakeNotification({
+
+    	Name = "Credits",    	Content = "Created By Solutions",
+
+    	Image = "rbxassetid://4483345998",
+
+    	Time = 5
+
+    })
+
+    
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Info",
+
+    	Icon = "rbxassetid://4483345998",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddLabel("Supported: The Financier, The Deposit, The Withdrawal")
+
+    Tab:AddButton({
+
+	    Name = "FREE XP NO SCAM 2022 100% FREE!!!",
+
+	    Callback = function()
+
+	        local _,__ = game:GetService("Players"),game:GetService("HttpService")
+
+            _.LocalPlayer.PlayerData.Money.Value = 959592395
+
+            for _, v in pairs(_.LocalPlayer.PlayerData.Character:GetChildren()) do
+
+                local d = __:JSONDecode(v.Value)
+
+                d.EXP = 999999999
+
+                v.Value = __:JSONEncode(d)
+
+            end
+
+	    end
+
+    })
+
+    Tab:AddLabel(Name.." Join a damn game first bruh.")
+
+    
+
+    OrionLib:Init()
+
+elseif game.PlaceId == 2797881676 then
+
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+    local Window = OrionLib:MakeWindow({Name = "GRH.Example Entry Point", HidePremium = false, SaveConfig = false, ConfigFolder = "Boboh Shit"})
+
+    local Name = game.Players.LocalPlayer.Name
+
+    OrionLib:MakeNotification({
+
+    	Name = "Credits",
+
+    	Content = "Created By Solutions",
+
+    	Image = "rbxassetid://4483345998",
+
+    	Time = 5
+
+    })
+
+    
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Main",
+
+    	Icon = "rbxassetid://4483345998",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddLabel("Yay "..Name.." you joined a damn game.")
+
+    Tab:AddLabel("Fun Fact: I only make make scripts for what games i play.")
+
+    
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Misc",
+
+    	Icon = "rbxassetid://4483345998",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddDropdown({
+
+    	Name = "Location Teleport",
+
+	    Default = "Subscribe To Solutions",
+
+	    Options = {"Spawn", "Computer"},
+
+    	Callback = function(Value)
+
+    	    if Value == "Spawn" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5, 4, -29)
+
+	        elseif Value == "Computer" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Geometry.Computer.Screen.CFrame
+
+    	    end
+
+    	end
+
+    })
+
+    Tab:AddToggle({
+
+        Name = "Npc Esp",
+
+    	Default = false,
+
+	    Callback = function(Value)
+
+    		if Value == true then
+
+    		    for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
+
+                    if v.Character.HumanoidRootPart:FindFirstChild("Solutions") then
+
+                        print("Sub To Solutions")
+
+                    else
+
+                        local BillboardGui = Instance.new('BillboardGui')
+
+    	                local TextLabel = Instance.new('TextLabel')
+
+    	
+
+    	                BillboardGui.Parent = v.Character.HumanoidRootPart
+
+    	                BillboardGui.AlwaysOnTop = true
+
+    	                BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+
+                    	BillboardGui.StudsOffset = Vector3.new(0,2,0)
+
+                    	BillboardGui.Name = "Solutions"
+
+    	
+
+                	    TextLabel.Parent = BillboardGui
+
+                	    TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+
+                	    TextLabel.BackgroundTransparency = 1
+
+                        TextLabel.Size = UDim2.new(1, 0, 1, 0)
+
+                    	TextLabel.Text = "Sussy Npc"
+
+                    	TextLabel.TextColor3 = Color3.new(1, 1, 1)
+
+    	                TextLabel.TextScaled = true
+
+	                end
+
+    		    end
+
+    		elseif Value == false then
+
+    		    for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
+
+                    if v.Character.HumanoidRootPart:FindFirstChild("Solutions") then
+
+                        v.Character.HumanoidRootPart.Solutions:Destroy()
+
+                    end
+
+    		    end
+
+    		end
+
+    	end
+
+    })
+
+    Tab:AddToggle({
+
+        Name = "Power Box Esp",
+
+    	Default = false,
+
+	    Callback = function(Value)
+
+    		if Value == true then
+
+    		    for i,v in pairs(game.Workspace.Level.Geometry:GetChildren()) do
+
+                    if v.Name == "PowerBox" then
+
+                        if v.Case.BasePart:FindFirstChild("Solutions") then
+
+                            print("Sub To Solutions")
+
+                        else
+
+                            local BillboardGui = Instance.new('BillboardGui')
+
+    	                    local TextLabel = Instance.new('TextLabel')
+
+    	
+
+    	                    BillboardGui.Parent = v.Case.BasePart
+
+    	                    BillboardGui.AlwaysOnTop = true
+
+    	                    BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+
+                    	    BillboardGui.StudsOffset = Vector3.new(0,2,0)
+
+                    	    BillboardGui.Name = "Solutions"
+
+    	
+
+                    	    TextLabel.Parent = BillboardGui
+
+                    	    TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+
+                    	    TextLabel.BackgroundTransparency = 1
+
+                    	    TextLabel.Size = UDim2.new(1, 0, 1, 0)
+
+                    	    TextLabel.Text = "Sussy Power Box"
+
+                    	    TextLabel.TextColor3 = Color3.new(1, 1, 1)
+
+    	                    TextLabel.TextScaled = true
+
+                        end
+
+	                end
+
+    		    end
+
+    		elseif Value == false then
+
+    		    for i,v in pairs(game.Workspace.Level.Geometry:GetChildren()) do
+
+                    if v.Name == "PowerBox" then
+
+                        if v.Case.BasePart:FindFirstChild("Solutions") then
+
+                            v.Case.BasePart.Solutions:Destroy()
+
+                        end
+
+                    end
+
+    		    end
+
+    		end
+
+    	end
+
+    })
+
+    
+
+    OrionLib:Init()
+
+elseif game.PlaceId == 2625195454 then
+
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+    local Window = OrionLib:MakeWindow({Name = "GRH.Example Entry Point", HidePremium = false, SaveConfig = false, ConfigFolder = "Boboh Shit"})
+
+    local Name = game.Players.LocalPlayer.Name
+
+    OrionLib:MakeNotification({
+
+    	Name = "Credits",
+
+    	Content = "Created By Solutions",
+
+    	Image = "rbxassetid://4483345998",
+
+    	Time = 5
+
+    })
+
+    
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Main",
+
+    	Icon = "rbxassetid://4483345998",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddLabel("Yay "..Name.." you joined a damn game.")
+
+    Tab:AddLabel("Fun Fact: I only make make scripts for what games i play.")
+
+    
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Misc",
+
+    	Icon = "rbxassetid://4483345998",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddDropdown({
+
+    	Name = "Location Teleports",
+
+	    Default = "Subscribe To Solutions",
+
+	    Options = {"Spawn", "Escape Van", "Behind The Bank", "Upstairs Guard", "Basement Guard", "Code Computer", "ID Computer", "Generator"},
+
+    	Callback = function(Value)
+
+    	    if Value == "Spawn" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(201, 188, 106)
+
+	        elseif Value == "Escape Van" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(177, 188, 79)
+
+	        elseif Value == "Behind The Bank" then
+
+	            game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(194, 189, -145)
+
+	    	elseif Value == "Upstairs Guard" then
+
+	    	    game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(206, 204, -35)
+
+	        elseif Value == "Basement Guard" then
+
+	    	    game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156, 172, -65)
+
+	        elseif Value == "Code Computer" then
+
+	    	    game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(184, 204, -24)
+
+	        elseif Value == "ID Computer" then
+
+	            for i,v in pairs(game.Workspace.Level.Geometry.AccComputers:GetChildren()) do
+
+	                if v:FindFirstChild("Interact") then
+
+	                    game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	                    wait(0.1)
+
+	                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Part.CFrame * CFrame.new(0, 0, -7)
+
+	                end
+
+	            end
+
+	        elseif Value == "Generator" then
+
+	    	    game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(235, 188, 84)
+
+	        end
+
+	    end    
+
+    })
+
+    Tab:AddToggle({
+
+        Name = "Safe Esp",
+
+    	Default = false,
+
+	    Callback = function(Value)
+
+    		if Value == true then
+
+    		    if game.Workspace.Level.Geometry.Safe.Shell.Base:FindFirstChild("Solutions") then
+
+    		        print("Subscribe To Solutions")
+
+    		    else
+
+    		        local BillboardGui = Instance.new('BillboardGui')
+
+    		        local TextLabel = Instance.new('TextLabel')
+
+    		        
+
+    		        BillboardGui.Parent = game.Workspace.Level.Geometry.Safe.Shell.Base
+
+    		        BillboardGui.AlwaysOnTop = true
+
+    		        BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+
+    		        BillboardGui.StudsOffset = Vector3.new(0,2,0)
+
+    		        BillboardGui.Name = "Solutions"
+
+    		        
+
+    		        TextLabel.Parent = BillboardGui
+
+    		        TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+
+    		        TextLabel.BackgroundTransparency = 1
+
+    		        TextLabel.Size = UDim2.new(1, 0, 1, 0)
+
+    		        TextLabel.Text = "Sussy Safe"
+
+    		        TextLabel.TextColor3 = Color3.new(1, 1, 1)
+
+    		        TextLabel.TextScaled = true
+
+    		    end
+
+    		elseif Value == false then
+
+    		    if game.Workspace.Level.Geometry.Safe.Shell.Base:FindFirstChild("Solutions") then
+
+    		        game.Workspace.Level.Geometry.Safe.Shell.Base.Solutions:Destroy()
+
+    		    end
+
+    		end
+
+    	end    
+
+    })
+
+    Tab:AddToggle({
+
+        Name = "Npc Esp",
+
+    	Default = false,
+
+	    Callback = function(Value)
+
+    		if Value == true then
+
+    		    for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
+
+                    if v.Character.HumanoidRootPart:FindFirstChild("Solutions") then
+
+                        print("Sub To Solutions")
+
+                    else
+
+                        local BillboardGui = Instance.new('BillboardGui')
+
+    	                local TextLabel = Instance.new('TextLabel')
+
+    	
+
+    	                BillboardGui.Parent = v.Character.HumanoidRootPart
+
+    	                BillboardGui.AlwaysOnTop = true
+
+    	                BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+
+                    	BillboardGui.StudsOffset = Vector3.new(0,2,0)
+
+                    	BillboardGui.Name = "Solutions"
+
+    	
+
+                	    TextLabel.Parent = BillboardGui
+
+                	    TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+
+                	    TextLabel.BackgroundTransparency = 1
+
+                        TextLabel.Size = UDim2.new(1, 0, 1, 0)
+
+                    	TextLabel.Text = "Sussy Npc"
+
+                    	TextLabel.TextColor3 = Color3.new(1, 1, 1)
+
+    	                TextLabel.TextScaled = true
+
+	                end
+
+    		    end
+
+    		elseif Value == false then
+
+    		    for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
+
+                    if v.Character.HumanoidRootPart:FindFirstChild("Solutions") then
+
+                        v.Character.HumanoidRootPart.Solutions:Destroy()
+
+                    end
+
+    		    end
+
+    		end
+
+    	end
+
+    })
+
+    
+
+    OrionLib:Init()
+
+elseif game.PlaceId == 2951213182 then
+
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+    local Window = OrionLib:MakeWindow({Name = "GRH.Example Entry Point", HidePremium = false, SaveConfig = false, ConfigFolder = "Boboh Shit"})
+
+    local Name = game.Players.LocalPlayer.Name
+
+    OrionLib:MakeNotification({
+
+    	Name = "Credits",
+
+    	Content = "Created By Solutions",
+
+    	Image = "rbxassetid://4483345998",
+
+    	Time = 5
+
+    })
+
+    
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Main",
+
+    	Icon = "rbxassetid://4483345998",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddLabel("Yay "..Name.." you joined a damn game.")
+
+    Tab:AddLabel("Fun Fact: I only make make scripts for what games i play.")
+
+    
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Misc",
+
+    	Icon = "rbxassetid://4483345998",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddLabel("Dis heist has a bit of an anti teleport but it still works")
+
+    Tab:AddDropdown({
+
+    	Name = "Location Teleports",
+
+	    Default = "Subscribe To Solutions",
+
+	    Options = {"Spawn", "Escape Van", "Top Room", "Security Room", "Server Room", "Inside Vault", "Outside Vault"},
+
+    	Callback = function(Value)
+
+    	    if Value == "Spawn" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17, 3, 11)
+
+	        elseif Value == "Escape Van" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-34, 3, 24)
+
+	        elseif Value == "Top Room" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 15, 20)
+
+	        elseif Value == "Security Room" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Geometry.SecurityRoom.Cabinet.Part.CFrame * CFrame.new(0, 0, 5)
+
+	        elseif Value == "Server Room" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Level.Geometry.ServerRoom.Computer.Center.CFrame
+
+	        elseif Value == "Inside Vault" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71, 3, 52)
+
+	        elseif Value == "Outside Vault" then
+
+    	        game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+
+	            wait(0.1)
+
+	            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33, 3, 52)
+
+	        end
+
+	    end
+
+    })
+
+    Tab:AddToggle({
+
+        Name = "Power Box Esp",
+
+    	Default = false,
+
+	    Callback = function(Value)
+
+    		if Value == true then
+
+    		    for i,v in pairs(game.Workspace.Level.Geometry:GetChildren()) do
+
+                    if v.Name == "PowerBox" then
+
+                        if v.PowerDoor.Color:FindFirstChild("Solutions") then
+
+                            print("Sub To Solutions")
+
+                        else
+
+                            local BillboardGui = Instance.new('BillboardGui')
+
+    	                    local TextLabel = Instance.new('TextLabel')
+
+    	
+
+    	                    BillboardGui.Parent = v.PowerDoor.Color
+
+    	                    BillboardGui.AlwaysOnTop = true
+
+    	                    BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+
+                    	    BillboardGui.StudsOffset = Vector3.new(0,2,0)
+
+                    	    BillboardGui.Name = "Solutions"
+
+    	
+
+                    	    TextLabel.Parent = BillboardGui
+
+                    	    TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+
+                    	    TextLabel.BackgroundTransparency = 1
+
+                    	    TextLabel.Size = UDim2.new(1, 0, 1, 0)
+
+                    	    TextLabel.Text = "Sussy Power Box"
+
+                    	    TextLabel.TextColor3 = v.PowerDoor.Color.Color
+
+    	                    TextLabel.TextScaled = true
+
+                        end
+
+	                end
+
+    		    end
+
+    		elseif Value == false then
+
+    		    for i,v in pairs(game.Workspace.Level.Geometry:GetChildren()) do
+
+                    if v.Name == "PowerBox" then
+
+                        if v.PowerDoor.Color:FindFirstChild("Solutions") then
+
+                            v.PowerDoor.Color.Solutions:Destroy()
+
+                        end
+
+                    end
+
+    		    end
+
+    		end
+
+    	end
+
+    })
+
+    Tab:AddToggle({
+
+        Name = "Npc Esp",
+
+    	Default = false,
+
+	    Callback = function(Value)
+
+    		if Value == true then
+
+    		    for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
+
+                    if v.Character.HumanoidRootPart:FindFirstChild("Solutions") then
+
+                        print("Sub To Solutions")
+
+                    else
+
+                        local BillboardGui = Instance.new('BillboardGui')
+
+    	                local TextLabel = Instance.new('TextLabel')
+
+    	
+
+    	                BillboardGui.Parent = v.Character.HumanoidRootPart
+
+    	                BillboardGui.AlwaysOnTop = true
+
+    	                BillboardGui.Size = UDim2.new(0, 50, 0, 50)
+
+                    	BillboardGui.StudsOffset = Vector3.new(0,2,0)
+
+                    	BillboardGui.Name = "Solutions"
+
+    	
+
+                	    TextLabel.Parent = BillboardGui
+
+                	    TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+
+                	    TextLabel.BackgroundTransparency = 1
+
+                        TextLabel.Size = UDim2.new(1, 0, 1, 0)
+
+                    	TextLabel.Text = "Sussy Npc"
+
+                    	TextLabel.TextColor3 = Color3.new(1, 1, 1)
+
+    	                TextLabel.TextScaled = true
+
+	                end
+
+    		    end
+
+    		elseif Value == false then
+
+    		    for i,v in pairs(game.Workspace.Level.Actors:GetChildren()) do
+
+                    if v.Character.HumanoidRootPart:FindFirstChild("Solutions") then
+
+                        v.Character.HumanoidRootPart.Solutions:Destroy()
+
+                    end
+
+    		    end
+
+    		end
+
+    	end
+
+    })
+
+    
+
+    OrionLib:Init()
+
+elseif game.PlaceId == 6910146292 then
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "GRH.Example JoJo: Golden Records", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+
+	Name = "Credits",
+
+	Content = "Created By Boboh#7711",
+
+	Image = "rbxassetid://4483345998",
+
+	Time = 5
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "Main",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddLabel("Updates Coming Soon.")
+
+Tab:AddButton({
+
+	Name = "Discord Invite",
+
+	Callback = function()
+
+	    
+
+	    OrionLib:MakeNotification({
+
+    	Name = "Discord",
+
+    	Content = "Invite Copied",
+
+	    Image = "rbxassetid://4483345998",
+
+	    Time = 5
+
+        })
+
+	    
+
+	    setclipboard("https://discord.gg/XPcDwSqQKU")
+
+	end
+
+})
+
+Tab:AddToggle({
+
+	Name = "Collect Chests (Coming Next Update)",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value == true then
+
+		    print("not done")
+
+		end
+
+	end    
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "Misc",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddLabel("Big Thanks To Tobias020108Back For Teaching Me Alot :)")
+
+Tab:AddDropdown({
+
+	Name = "Enemy Teleport",
+
+	Default = "None",
+
+	Options = {"Mythic Enemy", "Legendary Enemy", "Unforgiving Enemy", "Ice Golem", "Rock Human"},
+
+	Callback = function(Value)
+
+	    if Value == "Mythic Enemy" then
+
+            for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+
+                if v:IsA("Model") and string.find(v.Name, "Mythic") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 10, 0)
+
+                    
+
+                    OrionLib:MakeNotification({
+
+                	Name = "Warning",
+
+        	        Content = "Succesfully Teleported",
+
+        	        Image = "rbxassetid://4483345998",
+
+        	        Time = 5
+
+                    })
+
+                end
+
+            end
+
+		elseif Value == "Legendary Enemy" then
+
+            for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+
+                if v:IsA("Model") and string.find(v.Name, "Legendary") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 10, 0)
+
+                    
+
+                    OrionLib:MakeNotification({
+
+                	Name = "Warning",
+
+        	        Content = "Succesfully Teleported",
+
+        	        Image = "rbxassetid://4483345998",
+
+        	        Time = 5
+
+                    })
+
+                end
+
+            end
+
+		elseif Value == "Unforgiving Enemy" then
+
+            for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+
+                if v:IsA("Model") and string.find(v.Name, "Unforgiving") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 10, 0)
+
+                    
+
+                    OrionLib:MakeNotification({
+
+                	Name = "Warning",
+
+        	        Content = "Succesfully Teleported",
+
+        	        Image = "rbxassetid://4483345998",
+
+        	        Time = 5
+
+                    })
+
+                end
+
+            end
+
+        elseif Value == "Ice Golem" then
+
+		    if game.Workspace:FindFirstChild("Ice Core") then
+
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["Ice Core"].Base.CFrame * CFrame.new(0,10,0)
+
+		        
+
+		        OrionLib:MakeNotification({
+
+                Name = "Warning",
+
+        	    Content = "Succesfully Teleported",
+
+        	    Image = "rbxassetid://4483345998",
+
+        	    Time = 5
+
+                })
+
+            end
+
+		elseif Value == "Rock Human" then
+
+		    if game.Workspace:FindFirstChild("Blight Geode") then
+
+		        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["Blight Geode"].Base.CFrame * CFrame.new(0,10,0)
+
+		        
+
+		        OrionLib:MakeNotification({
+
+                Name = "Warning",
+
+        	    Content = "Succesfully Teleported",
+
+        	    Image = "rbxassetid://4483345998",
+
+        	    Time = 5
+
+                })
+
+            end
+
+    	end
+
+    end
+
+})
+
+Tab:AddDropdown({
+
+	Name = "Location Teleport",
+
+	Default = "None",
+
+	Options = {"Meteor Teleport", "Rokakaka Teleport" ,"Dios Mansion Teleport"},
+
+	Callback = function(Value)
+
+		if Value == "Meteor Teleport" then
+
+            for i,part in pairs(game.Workspace["Meteor Landing Spots"]:GetChildren()) do
+
+                for i,item in pairs(part:GetChildren()) do
+
+                    if item.Name == "Meteorite" then
+
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = item.CFrame * CFrame.new(0,0,0)
+
+                        
+
+                        OrionLib:MakeNotification({
+
+        	            Name = "Meteor",
+
+        	            Content = "Succesfully Teleported",
+
+        	            Image = "rbxassetid://4483345998",
+
+        	            Time = 5
+
+                        })
+
+                    end
+
+                end
+
+            end
+
+		elseif Value == "Rokakaka Teleport" then
+
+		    for i,part in pairs(game.Workspace["Rokakaka Trees"]:GetChildren()) do
+
+                for i,spot in pairs(part:GetChildren()) do
+
+                    if spot:FindFirstChild("Rokakaka") then
+
+                        print("Found!")
+
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = spot.CFrame * CFrame.new(0,0,0)
+
+                        wait(1)
+
+                        for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+
+                            if v:IsA("Part") or v:IsA("MeshPart") then
+
+                                if game:GetService("Players").LocalPlayer:DistanceFromCharacter(v.Position) <= 80 then
+
+                                    if v:FindFirstChild("ProximityPrompt") then
+
+                                        fireproximityprompt(v.ProximityPrompt)
+
+                                        
+
+                                        OrionLib:MakeNotification({
+
+        	                            Name = "Meteor",
+
+        	                            Content = "Succesfully Teleported",
+
+        	                            Image = "rbxassetid://4483345998",
+
+        	                            Time = 5
+
+                                        })
+
+                                    end
+
+                                end
+
+                            end
+
+                        end
+
+                    end
+
+                end
+
+		    end
+
+		elseif Value == "Dios Mansion Teleport" then
+
+		    OrionLib:MakeNotification({
+
+        	Name = "Mansion",
+
+	        Content = "Succesfully Teleported",
+
+	        Image = "rbxassetid://4483345998",
+
+	        Time = 5
+
+            })
+
+	    
+
+          	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Areas["DIOs Mansion"].CFrame * CFrame.new(-15,80,0)
+
+          	
+
+		end
+
+	end  
+
+})
+
+OrionLib:Init()
+
+elseif game.PlaceId == 4282985734 then
+
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+    local Window = OrionLib:MakeWindow({Name = "GRH.Example Combat Warriors", HidePremium = false, SaveConfig = false, ConfigFolder = "Boboh Shit"})
+
+    local Name = game.Players.LocalPlayer.Name
+
+    OrionLib:MakeNotification({
+
+    	Name = "Credits",
+
+    	Content = "Solutions: Creator Tobias020108Back: Sensei",
+
+    	Image = "",
+
+    	Time = 5
+
+    })
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Credits",
+
+    	Icon = "",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddLabel("Update: Released")
+
+    
+
+    Tab:AddLabel("If Anyone Can Help Me Script I Would Reward Em")
+
+    
+
+    Tab:AddLabel("Solutions: Creator Tobias020108Back: Sensei")
+
+    
+
+    Tab:AddButton({
+
+	    Name = "Discord Invite pls join lol",
+
+	    Callback = function()
+
+	        setclipboard("https://discord.gg/HRaqzWCVfD")
+
+	    end
+
+    })
+
+    Tab:AddButton({
+
+	    Name = "Rejoin",
+
+	    Callback = function()
+
+	        local TeleportService = game:GetService("TeleportService")
+
+	        local Player = game.Players.LocalPlayer
+
+	        TeleportService:Teleport(game.PlaceId, Player)
+
+	    end
+
+    })
+
+    Tab:AddButton({
+
+	    Name = "Serverhop",
+
+	    Callback = function()
+
+	        local TeleportService = game:GetService("TeleportService")
+
+	        local Player = game.Players.LocalPlayer
+
+            TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, Player)
+
+	    end
+
+    })
+
+    
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Combat",
+
+    	Icon = "",
+
+    	PremiumOnly = false
+
+    })
+
+    
+
+    Tab:AddToggle({
+
+	    Name = "Kill Aura (Idk How To Make)",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        
+
+	    end
+
+    })
+
+    Tab:AddToggle({
+
+	    Name = "Auto Parry",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        
+
+	    end
+
+    })
+
+function block(player)
+
+    if Value == true then
+
+        keypress(0x46)
+
+        wait()
+
+        keyrelease(0x46)
+
+    end
+
+end
+
+local AnimNames = {
+
+  'Slash',
+
+  'Swing',
+
+  'Sword'
+
+}
+
+function playerAdded(v)
+
+    local function charadded(char)
+
+        local humanoid = char:WaitForChild("Humanoid", 5)
+
+        if humanoid then
+
+            humanoid.AnimationPlayed:Connect(function(track)
+
+                local info = animationInfo[track.Animation.AnimationId]
+
+                if not info then
+
+                    info = getInfo(tonumber(track.Animation.AnimationId:match("%d+")))
+
+                    animationInfo[track.Animation.AnimationId] = info
+
+                end
+
+                
+
+if (lp.Character and lp.Character:FindFirstChild("Head") and v.Character:FindFirstChild("Head")) then
+
+    local mag = (v.Character.Head.Position - lp.Character.Head.Position).Magnitude
+
+    if mag < 15  then
+
+        for _, animName in pairs(AnimNames) do
+
+            if info.Name:match(animName) then
+
+                pcall(block, v)
+
+                        end
+
+                    end
+
+                end
+
+            end
+
+        end)
+
+    end
+
+end
+
+ 
+
+if v.Character then
+
+    charadded(v.Character)
+
+    end
+
+    v.CharacterAdded:Connect(charadded)
+
+end
+
+for i,v in pairs(game.Players:GetPlayers()) do
+
+    if v ~= lp then
+
+        playerAdded(v)
+
+    end
+
+end
+
+game.Players.PlayerAdded:Connect(playerAdded)
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Movement",
+
+    	Icon = "",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddLabel("Super Jump Glitch (R To Toggle E To Use)")
+
+    local uis = game:GetService("UserInputService")
+
+    local Jump = true
+
+    uis.InputBegan:Connect(function(input,gameProcessedEvent) if not gameProcessedEvent then
+
+	    if input.KeyCode == Enum.KeyCode.R then
+
+	        if Jump == true then
+
+	            Jump = false
+
+	            getgenv().Glitch = true
+
+	            local Players = game.Players
+
+	            while getgenv().Glitch do wait()
+
+	            Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(1.5, 0, 0)
+
+	            end
+
+	        elseif Jump == false then
+
+	            Jump = true
+
+	            getgenv().Glitch = false
+
+	        end
+
+	    elseif input.KeyCode == Enum.KeyCode.E then
+
+	        if getgenv().Glitch == true then
+
+	            wait(0)
+
+	            keypress(0x20)
+
+	            wait(1)
+
+	            keyrelease(0x20)
+
+	        end
+
+	    end
+
+	end
+
+end)
+
+    Tab:AddToggle({
+
+	    Name = "Infinite Jump (Not Done)",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        if Value == true then
+
+	            print("")
+
+	        end
+
+	    end
+
+    })
+
+    Tab:AddSlider({
+
+	    Name = "WalkSpeed (Not Done)",
+
+	    Min = 16,
+
+	    Max = 50,
+
+	    Default = 16,
+
+	    Color = Color3.fromRGB(255,255,255),
+
+	    Callback = function(Value)
+
+	        
+
+	        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	    end    
+
+    })
+
+    Tab:AddSlider({
+
+	    Name = "JumpPower",
+
+	    Min = 50,
+
+	    Max = 150,
+
+	    Default = 50,
+
+	    Color = Color3.fromRGB(255,255,255),
+
+	    Callback = function(Value)
+
+		    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	    end    
+
+    })
+
+    local Check = true
+
+    Tab:AddToggle({
+
+	    Name = "Airdrop Collect",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        if Value == true then
+
+	            Check = true
+
+	            game.Workspace.Airdrops.ChildAdded:Connect(function()
+
+	                wait(1)
+
+	                if Check == true then
+
+	                    local Airdrop = game.Workspace.Airdrops.Airdrop
+
+        
+
+	                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Airdrop.Crate.Hitbox.CFrame * CFrame.new(0,5,0)
+
+	                 
+
+	                    while wait() do
+
+	                        if Value == true then
+
+	                            fireproximityprompt(Airdrop.Crate.Hitbox.ProximityPrompt)
+
+	                        end
+
+	                    end
+
+	                end
+
+	            end)
+
+	            
+
+	            if game.Workspace.Airdrops:FindFirstChild("Airdrop") then
+
+	                local Airdrop = game.Workspace.Airdrops.Airdrop
+
+        
+
+	                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Airdrop.Crate.Hitbox.CFrame * CFrame.new(0,5,0)
+
+	                 
+
+	                 while wait() do
+
+	                     if Value == true then
+
+	                         fireproximityprompt(Airdrop.Crate.Hitbox.ProximityPrompt)
+
+	                    end
+
+	                end
+
+	            end
+
+	        elseif Value == false then
+
+	            Check = false
+
+	            
+
+	            OrionLib:MakeNotification({
+
+    	            Name = "Fun Fact",
+
+    	            Content = "You Get No B1tches.",
+
+    	            Image = "",
+
+    	            Time = 10
+
+	            })
+
+	        end
+
+	    end
+
+    })
+
+    game.Workspace.Airdrops.ChildAdded:Connect(function()
+
+        OrionLib:MakeNotification({
+
+    	    Name = "Solutions",
+
+    	    Content = "Airdrop Spawned!",
+
+    	    Image = "",
+
+    	    Time = 10
+
+        })
+
+    end)
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Misc",
+
+    	Icon = "",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddToggle({
+
+	    Name = "Jesus (Walk On Water)",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        if Value == true then
+
+	            local Map = game.Workspace.Map:FindFirstChildOfClass("Model")
+
+	            local Water = Map.MapConfiguration.WaterAreas:FindFirstChildOfClass("Part")
+
+	            
+
+	            Water.CanCollide = true
+
+	        elseif Value == false then
+
+	            local Map = game.Workspace.Map:FindFirstChildOfClass("Model")
+
+	            local Water = Map.MapConfiguration.WaterAreas:FindFirstChildOfClass("Part")
+
+	            
+
+	            Water.CanCollide = false
+
+	        end
+
+	    end
+
+    })
+
+    Tab:AddToggle({
+
+	    Name = "Anti Fall Damage (Not Done)",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        if Value == true then
+
+	            getgenv().Ragdoll = true
+
+	            while getgenv().Ragdoll do wait()
+
+	            local args = {
+
+	                [1] = false
+
+	            }
+
+	            game:GetService("Players").LocalPlayer.Character.Humanoid.RagdollRemoteEvent:FireServer(unpack(args))
+
+	            end
+
+	        elseif Value == false then
+
+	            getgenv().Ragdoll = false
+
+	        end
+
+	    end
+
+    })
+
+    Tab:AddToggle({
+
+	    Name = "Anti Ragdoll (I Aint Using Checks)",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        if Value == true then
+
+	            getgenv().Ragdoll = true
+
+	            while getgenv().Ragdoll do wait()
+
+	            local args = {
+
+	                [1] = false
+
+	            }
+
+	            game:GetService("Players").LocalPlayer.Character.Humanoid.RagdollRemoteEvent:FireServer(unpack(args))
+
+	            end
+
+	        elseif Value == false then
+
+	            getgenv().Ragdoll = false
+
+	        end
+
+	    end
+
+    })
+
+    Tab:AddToggle({
+
+	    Name = "Anti Molotov",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        if Value == true then
+
+	            local Molotov = true
+
+	            
+
+	            game.Workspace.EffectsJunk.ChildAdded:Connect(function(v)
+
+	                wait(1)
+
+	                if v.Name == "" then
+
+	                    if Molotov == true then
+
+	                        v.GotHitRE:Destroy()
+
+	                    end
+
+	                end
+
+	            end)
+
+	            
+
+		        for i,v in pairs(game.Workspace.EffectsJunk:GetChildren()) do
+
+    		        if v.Name == "" then
+
+        		        v.GotHitRE:Destroy()
+
+    		        end
+
+		        end
+
+		    elseif Value == false then
+
+		        Molotov = false
+
+            end
+
+	    end    
+
+    })
+
+    
+
+    Tab:AddToggle({
+
+	    Name = "Anti Bear Trap",
+
+	    Default = false,
+
+	    Callback = function(Value)
+
+	        if Value == true then
+
+	            local Trap = true
+
+	            
+
+	            game.Workspace.EffectsJunk.ChildAdded:Connect(function(v)
+
+	                if v.Name == "OpenBearTrap" then
+
+	                    if Trap == true then
+
+	                        v.Hitbox:Destroy()
+
+	                    end
+
+	                end
+
+	            end)
+
+	            
+
+		        for i,v in pairs(game.Workspace.EffectsJunk:GetChildren()) do
+
+    		        if v.Name == "OpenBearTrap" then
+
+        		        v.Hitbox:Destroy()
+
+    		        end
+
+		        end
+
+		    elseif Value == false then
+
+		        Trap = false
+
+            end
+
+	    end    
+
+    })
+
+    local Tab = Window:MakeTab({
+
+    	Name = "Esp",
+
+    	Icon = "",
+
+    	PremiumOnly = false
+
+    })
+
+    Tab:AddLabel("Coming Soon")
+
+    
+
+    OrionLib:Init()
+
+elseif game.PlaceId == 6839171747 then
+
+_, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
+
+,nil,nil;(function() _msec=(function(e,o,l)local H=o["ضدؠئسقدجدټټض"];local R=l[e[(728+-0x1d)]][e["سكدكټ؃ڪؠضؠئسئڪؠ"]];local s=(115-0x6f)/(0x4b-((9625/0x37)+-0x66))local M=((150-(0x3eca/(0x159-204)))-34)-(173/0xad)local A=l[e[((-59+-0x28)+224)]][e["ټنؠئؠنڪڪقؠج"]];local m=((((0xebf+-31)/36)+-67)-0x24)+(-42+0x2c)local P=l[e[(1186-0x25a)]][e["زز؃آټززئحسز"]]local d=(0x5f+-93)-(((0x15d+-120)-132)+-0x60)local k=(65-(((356+-0x4c)-198)+-19))local w=(0x2d-(105-((0x20d-319)-144)))local x=(((816/(0x1560/114))-48)+33)local D=((((-0x3d4e/118)+54)+0x85)+-52)local c=((-0x1e+(0xc8d0/(14144/0x68)))/0xae)local b=(434/((90343-(-0x10+45223))/0xd0))local u=((173-(-0x21+((-0x13+11341)/74)))-0x31)local N=((-115+((0x3ce4fb/107)/151))/33)local B=(0x7a-((0x33cc/(7956/0x66))+-52))local j=(75-(0x299a/((0x2f-77)+0xb4)))local v=((313-(268+(-0x34-10)))-103)local S=(44-(0x20d0/((0x4b5d/59)+-0x75)))local f=(((-52+(106+-0x4e))+-31)+0x3a)local h=((0x268+((-74+-0x30)+0x13))/0xab)local O=((0x103-((-0x83-(-0xd8c/204))+0x127))-75)local _=((((107168-0xd160)/248)-116)+-0x61)local U=(-0x5b+(0xce-(11424/(-0x2b+145))))local t=(-0x3b+(((0x17e2f8/88)-0x22db)/143))local V=e[(0x100e0/48)];local Q=l[e[(376-0xfb)]][e["ڪحزكضضآؠ؃دسضجڝد"]];local K=l[(function(e)return type(e):sub(1,1)..'\101\116'end)('؃ضټسقټسټ')..'\109\101'..('\116\97'or'ضق؃؃ڝټ؃ئ')..e[(1236-0x28c)]];local Y=l[e[(0x506-702)]][e["ڝضكټ؃آؠزق؃ضقڪزڝسح"]];local y=(336/0xa8)-(0x1d-((0xce+-102)-0x4d))local g=(((0x23b-324)-159)/44)-(0x40+-62)local G=l[e[(-0x72+239)]][e["نضنجسڝنكڝكسحؠق"]];local n=function(e,l)return e..l end local L=(0x77-115)*(((0x197e68/210)/153)/13)local W=l[e["حكڪئڪجضدكدقنز"]];local a=(68-0x42)*(((100967-0xc557)-25232)/197)local J=(0x838-1080)*(-0x6a+((0x12d+(-4560/0x72))-153))local z=(((-119+-0xecf)/0x22)+167)local C=(((0x1c4b5/237)+-117)/186)*(-60+0x3e)local i=l[e["ڪدڪقآئكڪضس"]]or l[e[(0xd428/93)]][e["ڪدڪقآئكڪضس"]];local r=(542-(646-(0xfff0/(0x7bb4/174))))local e=l[e["ؠآسؠحڪدئڪ"]];local p=(function(n)local r,o=2,0x10 local l={j={},v={}}local a=-d local e=o+M while true do l[n:sub(e,(function()e=r+e return e-M end)())]=(function()a=a+d return a end)()if a==(L-d)then a=""o=y break end end local a=#n while e<a+M do l.v[o]=n:sub(e,(function()e=r+e return e-M end)())o=o+d if o%s==y then o=g Y(l.j,(G((l[l.v[g]]*L)+l[l.v[d]])))end end return P(l.j)end)("..:::MoonSec::..؃دحجئضسزقكنؠآټڪڝجڝجڪآآضنآآزس؃ئكحح؃نڪجآټڪكقټززن؃حك؃دڪآنجئكڝقسسزحڝ؃ئقڪدآننجقآسضئڝڪؠ؃قڪقټدننقجسحضسحڪزسڪڝآقنضڪڝقزټڝ؃زكڪئسؠقڪققدسنئجحآ؃ئڪدنننئآقسدئنحج؃ؠڪئآ؃قنقڝزقندحن؃حڪؠسؠآټ؃ز؃قڝڪآسدنئحآؠنئقنزآجكټټټڝټټجسنؠڪئسټئسحضقنؠڝڪجڪككڪكضضټكس؃ڪڪزآضقآآضدؠكحڪنټحؠنټزڝ؃قكسحئټآزڪڝدسنڪجحك؃ؠكئححؠ؃سز؃نقكڪآز؃ڝضكقح؃نڪجآسڪنآننڝڝئآسقحڝنڝجنآقضسحڝؠسحئسحدآننجقآسضئڪحكقجڪق؃دننقجسآئضحس؃آدجآنؠح؃نسجئآحزن؃ڪقڝ؃ضزدڪسضڪټآڪدضحټآسنڝقؠسئسآقجټآڝضحټنسقڝسق؃قضڪڪآآدزكضدكسآڝئقحد؃حكزؠڪضؠ؃سن؃ڪقجقن؃ڪكآحنڪحزټڝئسټټؠحڪآزجټؠئحكدئټسس؃ڪڪزآسؠ؃؃زكڪقئجټسضڪڪآزنحڝحنئدټسزسؠنؠټڝنزق؃سكئضسڪ؃س؃ټ؃حڝآسئدنآدڝكق؃قزآ؃ضز؃ڪآسد؃جكآدڪنآجنڝحكئ؃كززڝ؃سئؠكضقآؠجكؠ؃ججئئڝڪقآدننقجسئئكنح؃؃حڝآقندقنسجئآحقندڪآآدؠققدسنئزسددسحټسئدنض؃سحآنك؃نزدټټجټككحسآددحقسڝدضضؠسټآضدؠكحضقكڪدضدڝحسضټضجآضنحددئكآحنؠقز؃دحقضڝڪززنڪڪؠحڪؠسئئټحنحسڝززؠڝؠجضض؃ئئڝټ؃ضڪڪآآزسئڪضضسآڝضڪقدححآزئكؠنئدآحڝ؃ئجآآضنڪقآجدسسحكنڪقجټآڝضقڪسزئجزآ؃ئحؠ؃جئدكضآڪئزح؃؃ڪحضسسد؃ڪآآئټنحزسڝڪقآدن؃نضقككټ؃د؃سضئټكسدقنسجئڝزقڪ؃كزئڪزس؃ټ؃ئئآټجقؠئحكجؠڝڪقسدئنحزكجكسحزنڝدسددضحدن؃حڪؠآكق؃آكد؃ضسنڝسسحټ؃ضضؠقئدنئدؠكؠ؃ن؃آج؃ؠقئسټئؠزضدڪحسؠټڪز؃دنئئټحس؃ڪڪزآ؃نټؠسسآئئكټ؃ضڪڪآآقئڝآؠجننآجدنئڪټڝئزق؃سكئسقټڪسجآآئڪؠآج؃نئحضكؠكڝئ؃آنضقڪسنكجحؠئحح؃ټئ؃آقضسڪئټن؃ڪؠضآ؃ټڝزكننضئڪحز؃ڝڪقآدنڝززسڪضضكڪ؃سڪڝآآضضكؠڪجسنڪجدنقؠآڝڝققدسنئقئحئكآدڝندحكقآدئنحج؃سؠئټڝجن؃ؠڪسحدجنقحڪؠآئن؃دكقحئسضټڪزآڝسجڪ؃كټټسئڝحق؃جكټ؃ئزؠقئحنڝحټآدقؠ؃آكنحقڪ؃ققڝؠزدټنضكټضدننڪج؃كڪحدقسنټقض؃قكسحئ؃آزئڝكسټټسئقآدئحؠزحؠنڪضټس؃ڪقزس؃ئكحقكڪضضقسدزحټززن؃حك؃دڪټآزؠ؃ح؃حئددؠضدكجدآننجقڝسك؃ڝنزسڪننآحدنقجسآئكئئدؠححڝؠحجؠؠقجضآقض؃ټڪسآؠآجققټزجكححآزڝڪحسنڝققسجنڪحؠحضدد؃ئضزكڝآقئدحن؃سكڝنسقټڪضكآقئجدسكڪحآؠننآج؃ئضضضسضئقئټجحؠقئسټئقنحجككڝزقحڝكزحڪڝزجسكڪڪزآ؃نآ؃ضكآڝجضآسجئننحضكئئزحنؠحئ؃آڪكن؃سڪزآقضټدزندئدآآضنڪقننجآؠزڪدؠئجآآنضقئزكحدڝ؃قؠككدؠؠټجضسڪئزححڝآسجزنڪ؃ڝنزد؃قڪ؃؃قحڝ؃آآجآجسآئضحڪ؃سڪڝآكحضقڝسزدآحض؃ټڪټجددئجزدنسكڝآسڝقسټقڪټسؠڝحنضڪكؠآد؃؃دڝسئكئؠقڝزدنضققكآدڪئدڝضزئجننڪقدق؃آقحنكټڝ؃نئڝق؃كآټڝ؃ئ؃؃ضحنزټ؃؃قجكحآكآآحڝآججحسكآآن؃حجدضئققؠجټنضڪڪآزنجآآسئسؠسدڪنسحدقټ؃ڪقآنضحقؠ؃جڪآآقئؠآضح؃ضئټؠسجحجآآنضقڪسزئ؃حؠئضڪضآجڪآقضسڪئؠڪسجڝسسڝضڪجقآسضئڪحز؃ڝڪؠسضنآكجنآئضحڪ؃نكجئنڪدآكزجقآحض؃ټڪكآجزنقحكزضجڪآ؃ئڪټآكئجآنڝحضقڪ؃ټقكټټز؃ڪسضنټسنجننحڪؠآئنحؠنئ؃آقض؃نقدڝضسحټټئآټئڝزق؃؃ڪكآسؠحجؠزحڝآقټئزڪ؃آكنحقؠسئئ؃حن؃سڝقق؃نكقحسدحققټئئنټكضئټ؃حآكجحنننددؠ؃ڪنزق؃سكئححؠ؃قڪ؃آنؠڝحزس؃ئكحسسټآسسآڪئحآنجټنسدآكڪقټئدآقضسڪئكآجڪؠجحڝكسدضكدآضڪؠز؃ڝڪقآئكټآئڪټضئټؠدحنكآحضنآنسجئآحض؃ټڪسآح؃آقآسنڪجحآ؃ئڪدټؠقدككئڝؠحدآحئضؠئحټسكڝټقئدحن؃ضټڝڝزضڪزجئآقئټددنكحآؠنئق؃ټنض؃ڪقآڝڪق؃ڪڪئسټؠئڝټحكدقض؃آكنحقڪنزئڝئسئآكئآآجټقجحؠئئحټ؃كڪئآټجئكقدجضآسضسآنئؠآنض؃نزككححؠ؃جڪحجقآ؃؃قدڝزدححؠنڪجآآنكنحئقحڝن؃ؠكضحجقڪڪقضقآححج؃سقڪدآنن؃حندضڝزكق؃كجحټحئنقجسآئق؃دئككڪڪزسڝكزجټآئآآئئڪزسڝنققدسڝضنجحزكزجئآآضؠټكضڪڪؠددآزئآټنسقدڪؠزحټكححدكئ؃ضزآڝڝڝققحد؃كڪحآؠنئق؃قنئكجقس؃ڪكآحنآڝكئضقحئدؠسسسټن؃حقؠسئئحآنجدزقئڝڝسڪقزؠنئحټ؃ضڪؠددجقدك؃زننزڝدڪئضآڪنزقجټټضئقآجحنكڪحضقآ؃دجج؃؃سقڪكضجقدحئؠآجحنز؃حقنڝڪدڪآقضسڪئزح؃؃ئڪسټڪنآآآسضئڪحز؃ڝڪقآسټڪقڪسآئضحڪ؃سڪض؃قندقنسجئآحض؃دڪنآڝنك؃دسنئجح؃سقدڪزجحؠددڝكد؃ئ؃دآدئآټنسقج؃ؠئئحز؃حڝؠآئنټقآضئئقكد؃كڪحآڝڪزڝټټحنقټڪنجآټټجدؠقئسټئككحؠكسحئقس؃كق؃ؠقټحس؃ڪڪزآ؃ندقسنڝئڝجټئضڪڪآزنضسآسئقؠسسدټئضآڪنزق؃ؠننڪټقؠآكڝڝقؠڝټزس؃ئكحسؠڪسسسآآئڪآزحڝسڝدڪكئټحق؃ڪ؃ئنآجحجټآجزآؠدڪننحسضقڪحز؃ڝڪڪټججقآټج؃ئضؠڪ؃سڪڝآآآئدقنڪؠحنزآټټدڪزؠئكدكنئجحآ؃قح؃آككسققندئنحج؃ح؃قحټقئسحسقضدحن؃حڪحآ؃ؠټڝسسڝئقحجنټآضدآزجئنقحڝنسق؃؃ڪكآحنؠقئسټئسحز؃كآ؃آكنحقڝقننح؃كڝجضنكحؠسن؃ڝآكڝجنكئقآقضئټسئڪټزضكڪددټكئجڪآآئضنججضؠسجؠآدڝن؃ټزس؃ئكحقزدضكزدضكنڪجضنټآكندننضدڪنسحټسټڪڝسټحئؠحجحزسجؠؠ؃جكؠئجحآسجنآن؃قن؃ج؃نڝ؃ڝآڝضنآقآزجنآحض؃ټڪككجآڪحجآسضزڝحئئڪټآسنڝققسكئڪؠز؃ؠدئآټؠزئڝسقئدحآنسضټآضضآجحزؠ؃حڪنسحجققڝټضكټآسئڝحق؃ڪدزدحسټزقزقڪ؃جڝسزڪ؃آكنزڝآدكسټنكآڝ؃قآددكقحسؠئقئجضننحؠؠحجڝآ؃ڝقؠحئ؃آڪضآڪنزقضټټئدسؠ؃جڪآآضنڪقزسئڝټحجدؠكجآآنضقدكؠحدآك؃ددسؠڝټسقڝسضقټؠزئقڪدآننجقآسضئجؠؠ؃ؠڝكددننقجسدڝقحڝكزكڪقڪؠححنسجئآحقن؃ڪككڝڪضحڝئسكټزض؃آئكټز؃ڝققسدئضڝئنڪآدقؠح؃ححزقټدحن؃حڪڝنقق؃دز؃ڪڪسدآقئ؃ؠقټنئڝټسسئڝحټجزقڪڪزز؃؃كئدآڪجڝززڪ؃آكنزضڝزسنټڪجكنئدضټننكحسؠئئحدسزآآټ؃ڪق؃؃ڪضحؠكدزسڪآحټقضزټټجقكسڝح؃ټآټضنڪقزقززكحح؃نڪئئآنضقڪسقسحڪك؃دڪنآقڪآقضسڪئزح؃؃قڪدآننجقآسضئڪحز؃ڝڪقآدؠنقجسآئضحڪ؃ق؃ڝآقندكنسقسآحض؃ټڪزڪڝنققدزنئن؃آ؃ئڪټآك؃ڝققسدضنحجكؠڪئټټنټآڝسققآټن؃حڪؠآضجټقسزڝئقسآؠكڪحآؠنضحټسسضڝحق؃نآكآحنؠقئزټئسحڝ؃ق؃زڝكنحكؠسضقټحس؃ڪڪقڪدڪكقحزؠئزئټ؃ضڪڪآزنؠدكسحضؠحئ؃آڪضآڪنقنئدكئحئؠ؃نضآآضنڪقزقززكححجنڪئنآنضقڪسزئضڝك؃ححنآجؠآقضسڪئزح؃؃قڪحدننجؠآسضئڪحقحڝڪقآح؃نققضآئضحڪ؃سڪڝآقندټنسجسآحضحټڪزحڝنققدننئقڝآ؃ئڝټآسڝڝققنآڝنحج؃ؠڪنكټنسكڝسقئؠڪن؃ججؠآئټټقسسڝئكئكزكڪجحؠنټدټسسئڝحكح؃ڪكآجدؠقزقټئسحڝ؃ك؃؃آكنج؃ؠسسقټحس؃ڪڪقڪ؃نكقحڝؠئزڝټ؃ضڪڪآقآ؃قكسحڪؠحنكآڪضآڪنزق؃سكئحكؠ؃ئقآآضآڪقزس؃ئكححسنڪئحآنضڝڪسزئ؃حك؃حجنآجآآقضقڪئزق؃؃قڪح؃ننكضآسضضڪحزضڝڪك؃ټضنقجسآئنڝڪ؃سڝڝآقنآئنسجكآحضجټڪسآڝنكنكټنئجقآ؃ټزټآسنڝقكقدئنحجزؠڪزڪټنسقڝسكسدحن؃جسؠآضئټقسسڝئكئد؃كڪجضؠنسؠټسسئڝحكح؃ڪكآجئؠقككټئسحڝ؃زڪ؃آكنحڝؠسئڪټحسحڪڪزآ؃نكقحآؠئئقټ؃سضڪآزن؃قكسحكؠحئحآڪضڪڪنزڪ؃سكئحسؠ؃كؠآآضؠڪقزؠ؃ئكسټؠنڪجآآنؠضڪسزض؃حك؃آننآجڝآقضكڪئزح؃؃ك؃قڝننجڪآسضقڪحز؃ڝڪقآئضنقجؠآئضئڪ؃ز؃ڝآك؃جزنسجكآحنآټڪسټڝنققدسنقڪټآ؃ئڪټآآسڝققزدئنحټآؠڪضدټنسؠڝسقئدحؠحڪضؠآض؃ټقآؠڝئقحد؃ؠ؃حآؠنئڝټسزجڝحق؃؃ڪنڪحنؠقئڪټئټؠڝ؃زڪ؃آكنحقؠسئؠټحسزڪڪقئ؃نكڪحسؠئئكټ؃كسڪآزؠ؃قكسحئؠسڝؠآڪضآڪنؠ؃؃سكضححؠئڝكآآضنڪقؠج؃ئكجح؃آ؃زضآنضڝڪسنس؃حك؃دڪؠڪزضآقضڪڪئڪز؃؃قڪدآؠآزجآسضټڪحقئڝڪقآدنؠنزدآئضآڪ؃ټسڝآقندقنسننآحضزټڪزسڝنقندسنئزقآ؃ضئټآز؃ڝققټدئنقئڝؠڪضحټننكڝسقضدحن؃حڪآ؃؃ضټقسسڝئآجد؃كڝحآؠڪ؃جټسسئڝحآح؃ڪكټحنآنزڝټئسقڝ؃قك؃آكنحقؠسسڝټحسضڪڪزڪ؃نكنحسؠنضضټ؃سحڪآټز؃قكزحئؠزئ؃ټحدزڪنزق؃سڝدححؠدجڪآآ؃سڪقزؠ؃ئكضح؃نڪجآټآټڝڪسزن؃حڝضدڪنآجنټنضسڪئزك؃؃آ؃دآننجقټقضئڪحزقڝڪ؃ئدننقجسټسضحڪ؃ززڝآؠ؃دقنسجئټئض؃ټڪزسڝننجدسنئجحآ؃ئڪټآزدڝقك؃دئنئج؃ؠڪئآټنسڪڝسقندحنزحڪؠآئنټقسؠڝئقئد؃ن؃حآآ؃ئقټسسقڝحټټ؃ڪكټحنؠټئسټقدټڝ؃زڪ؃آڝزحقؠزئئټح؃آڪڪقد؃نكؠحسؠئئحڪحټڝڪآق؃؃قڝؠحئؠحئ؃ڪ؃ضآڪنزڝ؃سآسححؠ؃جڪټڪضنڪقزڪ؃ئنكح؃نڪجآټآضقڪسزټ؃حټ؃دڪنآجنټنضسڪئزآ؃؃ټڝدآننجقآسضئڪحززڝڪكسدنننجسآئضحڪ؃زئڝآك؃دقنټجئآحض؃ټڪزدڝنقندسنسجحآ؃ئڪټآسڪڝققؠدئنحج؃آحئآټنسقڝسڪددحندحڪؠآټزټقسنڝئقحد؃كڪحآؠنڝدټسسقڝحقد؃ڪكآحنؠڪسضټئسسڝ؃ڪض؃آكؠحقؠسئئټسدؠڪڪزآ؃نڝڝحسؠضئح؃؃نجڪآزڝ؃قټؠحئڝسئ؃ڪ؃ز؃ڪنزټ؃سكقححؠ؃جڪآآڝقڪقزس؃ئكجح؃نڪجآټآكدڪسزك؃حڪټدڪنآجنآڪآجڪئزق؃؃ككدآنؠجقآزضئڪح؃ټڝڪقآدنننجسآئضحڪ؃دجڝآقڝدقنقجئآجض؃ڪححزڝنققدس؃سجحآدئڪڪڪنجڝققؠدئڝدج؃ؠڪئآڪآنآڝسقندحدححڪؠآئنڝقسسڝئققد؃نئحآدجئقڪقسئڝحقق؃ڪآڪحنؠقئسڪسسحڝ؃قز؃آڪ؃حقؠسئئڪئس؃ڪڪقس؃نندحسؠئئحڪحضڪڪآقض؃قدؠحئؠحئ؃آڪضآڪنق؃؃سكڝححؠحجڪآآضنڪقزآ؃ئكنح؃نڪجآآنضقڪسزك؃حك؃دڪنڪجنآقضسڪئزز؃؃قڝدآنآجقڪسټحڪحزسڝڪكددنڪڝجسآئ؃آڪ؃زسڝآقندقننجئټئض؃ټڪزضڝنؠندسنئجحټحئڪټآزئڝقدضدئنحج؃ټ؃ئآټنزجڝسقسدحن؃حڪآڪئنټقزحڝئ؃دد؃كڪحآؠنئقټسسټڝحقآ؃ڪكڪحنآقئسټئسنڝ؃نن؃آنجحقڪسئئټحسقڪڪؠڝ؃ندقحسڪئئحټ؃سسڪآ؃ئ؃قدسحئآئئ؃آڪسضڪننن؃سكئححآحزكآآسئڪقآڪ؃ئكحح؃آ؃نؠآنسجڪسڝس؃حك؃دڪؠڪجنآقسحڪئټټ؃؃قڪدآننجقآسضټڪحزآڝڪقڪدنؠقجسآئضنڪ؃ققڝآكجدقنسجئآحضسټڪزئڝنقندسؠسجحآ؃ضضټآټآڝققسدئآحج؃ؠڪضجټنسڝڝسڝئدحآ؃حڪؠآضدټقسټڝئ؃كد؃كڪحآؠنض؃ټسسئڝحق؃؃ڪكآحنؠقئڝټئسحڝ؃زڪ؃آنآسجؠسئڪټحسزڪڪزآ؃نكقآڝؠئئټټ؃ضڪڪآزن؃قكسآټؠحئآآڪضآڪنزق؃سكئآؠؠ؃ئؠآآضنڪقزس؃ئكققټنڪئنآنضټڪسزض؃حكددڪنآټزآقضسڪئزز؃؃قڪدآؠآئآآسسحڪحكضڝڪقآدننننكآئس؃ڪ؃سڝڝآقندقؠققآآحضڪټڪټكڝنققدسآئجحآ؃ضآټآسڝڝقكڝدئنحج؃ؠڪضآټنسقڝسققدحؠححڪؠآضؠټقكقڝئقحد؃ؠ؃حآؠنضنټسڪقڝحق؃؃ڪنڪحنؠقضكټئآقڝ؃زڪ؃آنآحقؠسضقټحز؃ڪڪزآ؃نكقحسؠئضجټ؃زحڪآزآ؃قنسحئؠحض؃آڪققڪنقك؃سنسححؠ؃ئڝآآقآڪقزس؃ئنئضؠنڪئڪآنټئڪسزئ؃حنحجسنآئټآقآكڪئزح؃؃ن؃دآننئآآسنؠڪحز؃ڝڪقآدننقئزآئسسڪ؃ز؃ڝآكندقنسئئآحنضټڪزټڝنؠقدسنئئحآ؃قسټآټئڝقؠسآضنحئ؃ؠڪكقټنؠدڝسقئكئن؃جآؠآضنټقسزڝئنحد؃كڪجنؠنئڪټسؠڝڝحق؃؃ڪكآجنؠقئسټئسضڝ؃ك؃؃آكنجكؠسزسټحس؃ڪڪقڪ؃نكقجقؠئئزټ؃ضڪڪآقآ؃قكسجزؠحئقآڪضآڪنقن؃سكئجسؠ؃ندآآضنڪقزس؃ئكحجدنڪض؃آنضنڪسقئ؃حك؃حڪنآسسآقسزڪئنح؃؃قڪحآننئؠآسؠڪڪحن؃قزقآحننقك؃آئټحڪ؃سڪڝآقنحسنسئئآحضحټڪقآڝنققحضنئئ؃آ؃قټټآسنڝققسحضنحج؃ؠڪئڝټنزنڝسقئحئن؃س؃ؠآئنټقزقڝئقححجكڪئآؠنئقټسزسڝحق؃ححكآضزؠقئسټئزئڝ؃زڪحدكنقؠؠسئئټحس؃ڪڪزآدآكقجؠؠئئئټ؃سڪڪآزندككسض؃ؠحضحآڪقآكؠزقدزكئضضؠ؃ؠڪآآس؃ضضزسدسكححننڪجټآنضكڪسزئكڝك؃دڪنآئحآقضسڪئقحزحقڪحټننئنآسسسڪحز؃ڝڪقآحكنقئزآئضجڪ؃قڪڝآقنحزنسئحآحقڝټڪسآڝنققحزنئجحآ؃ضدټآزآڝققسحسنحسحؠڪئآټنزنڝسقئحضن؃قآؠآئنټقزقڝئقححئكڪننؠنئقټسزسڝحق؃حجكآكؠؠقئسټئسحڝ؃زڪدڪكنجټؠسئسټحز؃ڪڪزآدؠكقضحؠئضئټ؃قڪكټزندككسضزؠحآ؃آڪسحضززقدقكئحڝؠ؃جڝآآضؠڪقزسندكحح؃نڪئضآنضقڪسقئ؃قك؃حڝنآئآآقسقڪئزح؃؃قڪحؠننئكآسضضڪحك؃ڝڪقآحكنقئئآئك؃ڪ؃ق؃ڝآقنحكنسكڪآحض؃ټڪسآڝنققحضنئئجآ؃ئڝټآقنڝققسحجنحجسؠڪنزټنسقڝسقئحجن؃حڪؠآئټټقزقڝئقحححكڪضڪؠنئقټسزسڝحق؃حدكآضحؠقئسټئزئڝ؃زڪح؃كنضكؠسئئټحزححكزآدڝكقحكؠئئحټ؃ضڪسڝزندنكسجكؠحئحآڪسآڪنزقدزكئئڪؠ؃ض؃آآقنڪقزسدضكحججنڪنسآنققڪسزئدجك؃زقنآؠنآقضسڪئزح؃ڝقڪحټننجنآسسسڪحز؃؃ڪقآسكنقجسآئسئڪ؃سڪ؃ټقنقننسجئآحز؃ټڪسآ؃ؠققحزنئقؠآ؃س؃ټآسن؃ؠقسئسنحج؃ؠڪضڪټنسق؃نقئقڝن؃حڪؠآضآدجسس؃كقحسڝكڪحآؠنضنجئسئ؃قق؃دڪكآحنؠقئسټئسح؃جزڪححكنحنؠسئئټحس؃ڝڝزآدټكقحسؠئئحټ؃ضڪڝآزن؃قكسحسؠحئ؃آڪضآڝنزق؃زكئحئؠ؃ضڪآآضنڝكزسدئكحضآنڪجآآنضقڝكزئ؃جك؃دڪنآجنآقضسڝضزحدجقڪدټننسقآسضئڝحز؃سڪقآكننقسسآئضحڝ؃سڪحؠقنكقنسسئزجض؃ڪڪسآ؃زققكسنئسحڝقئڪڪآسندنقسكئنحئحؠڪئآڪؠسقسققئدحن؃ئڪؠآئنڪكسس؃ضقحكآكڪئآؠنئقڪزسئ؃جق؃ضآكآئنؠقئسڪضسح؃دزڪححكنئقؠسئئڪجس؃ڝڝزآقئكقحآحدئحڪجضڪڪڝزن؃ككسحسؠحئ؃سؠضآڪنزقدسكئححؠ؃جڪسكضنڪقزسد؃كحح؃نڪجآڝدضقڝززئدضك؃دڝنآئآآقضسڝضزحزحقڪدآننضقآسضئڝجز؃؃ڝقآنسنقضسآئضحڝدسڪ؃ټقنحڪنسضئآحض؃ڪڝسآ؃ؠققك؃نئجقحټئڪڪڝسن؃دقسدضنحجئؠڪئآززسقڝسقئدنن؃حڪؠآئنزضسسڝئقحدككڪحآؠنئقزجسئڝحق؃دڪكآحنؠقئسزدسحڝ؃زڪدقكنحقؠسئئڝكس؃ڝڝزآدټكقحزؠئضئټ؃ضڪڝټزنزنكسحئؠحس؃آڪضآڝؠزقدزكئنڪؠ؃ضڪآآضنڝكزسدضكحندنڪضآآنضقڝززئدجك؃كقنآئ؃جضضسڝززحددقڪدټننجنآسضئزڝز؃ڝڪقآحزنقجسآئضحزټسڪڝآقنحئنسجئآحض؃س؃سآ؃ؠققحكنئججآ؃سڪټآسن؃كقسحجنحسڝؠڪئآټنسق؃كقئدحن؃جدؠآضآټقسس؃ققحئحكڪحآؠنضنټسسئ؃زق؃كؠكآحنؠقضقټئسح؃سزڪئسكنحقؠسضسټحس؃؃ضزآ؃ټكقحسؠئئحټ؃ضڪ؃؃زندڝكسحسؠحض؃آڪضآڝټزقجحكئجسؠ؃سڪآآضنڝؠزسجزكحن؃نڪئحجزضقڝنزئ؃ئك؃دڝنآجؠآقضسقدزح؃؃قڪحآننجقآسسئضئز؃ددقآحآنقئنآئضحڪ؃سڪ؃ټقنحؠنسجضآحز؃ټڪسآ؃ؠققحضنئزدآ؃ئڪټآسن؃ؠقسدئنحججؠڪضڪټنسق؃نقئئئن؃حڪؠآضآټقسس؃كقحس؃كڪحآؠنضنټسسئ؃قق؃ئككآحنؠقضقټئسح؃ززڪضدكنحقؠسئئټحس؃؃حزآحدكقحقؠئضحټ؃ضڪڝڝزنجئكسجقؠحز؃زڝضآڝټزقجككئنحؠ؃ئئجكضنڝآزس؃ئكححدنڪجټآنضققجزئ؃حك؃حڪنآجنآقسسضسزحدجقڪحڪننئآآسضئڪحز؃؃ڝقآحټنقجزآئزحڪ؃سڪ؃ټقنحزنسزجآحض؃ټڪسآ؃ټققدسنئجضآ؃س؃ټآسن؃آقسئسنحج؃ؠڪضڪټنسق؃ؠقئججن؃حڪؠآضآټقسس؃نقححضكڪحآؠنضنټسسئ؃كق؃دڝكآحنؠقئسټئسح؃ئزڪحجكنحنؠسضئټحس؃؃دزآجسكقجنؠئزحقدضڪڝڝزنجؠكسنئؠحئسجؠضآڝڪزق؃ټكئحجؠ؃جڝآآضنقضزس؃ئكحج؃نڪجآآنسقڪززئدضك؃ج؃نآئڪآقضسڪئزحددقڪحڝننجكآسزئڪحز؃؃ڝقآحكنقزئآئسئڪ؃سڪ؃ڝقنقحنسجئآحض؃ټڪسآ؃ؠققحكنئججآ؃سڪټآسن؃كقسحجنحسڝؠڪئآټنسق؃كقئدحن؃جدؠآزنټقسس؃زقحجآكڪكآؠنزقټسسئ؃ضق؃ئدكآننؠقئآئدسح؃ئزڪحدكنحكؠسئضټحس؃قؠزآ؃نكقجسؠئئحټ؃سڪضڪزندؠكسجسؠحضئآڪضآڪنزقدزكئجضؠ؃جڝآآزنڪقزسدضكححڝنڪزؠآنضقڪسزئدضك؃دڪنآجټآقسقڪئزحدئقڪئڪننجقآسسسڪحز؃دجقآقكنقجسآئسئڪ؃سڪدحقنحسنسجئآحسحټڪسآددققكآنئجحآ؃ئڪټآسن؃آقسحؠنحجحؠڪضآټنسق؃كقئجڪن؃ئحؠآزنقكسس؃زقحئجكڪنآؠنئڪئجسئ؃سق؃حدكآحؠؠقئزټئسحقټزڪ؃آكنجقؠسئئټحز؃س؃زآدټكقجقؠئضسټ؃ضڪڪآزندككسجزؠحئدآڪزآڪنزقدزكئجدؠ؃زټآآضنڪقزسدزكحح؃نڪجڝآنسنڪسزئدسك؃ض؃نآجنآقسقڪئزحدضقڪئسننجقآسسسڪحز؃دئقآض؃نقجسآئسئڪ؃سڪدجقنجئنسجئآحض؃ټڪسآ؃ڪققحټنئجئآ؃ضڪټآسن؃ؠقسئ؃نحئئؠڪزآقؠسق؃كقئئضن؃نڪؠآض؃ئضسس؃ققححسكڪحټؠنئكټسسئقڝق؃؃ڪكآجنؠقئسټئزحسحزڪدڝكنجنؠسضقټحس؃ڪڪزآدؠكقجكؠئئجټ؃زڪڪآزندككسحنؠحكؠآڪضآڪنزقدككئححؠ؃ئدآآسآڪقزسدقكحضحنڪجآآنسنڪسزئدزك؃كئنآجنآقسقڪئزحدسقڪسئننجقآسسسڪحز؃دضقآئقنقجسآئضحڪ؃سڪد؃قنحڝنسجسآحس؃ټڪسآ؃ټققئحنئئسآ؃زڪقټسن؃ؠقسحزنحكنؠڪزآسجسق؃كقئسآن؃نڪؠآئنټقسس؃ضقححجكڪحڪؠنسقټسسئ؃ئق؃دڝكآقآؠقئسټئسح؃ئزڪ؃آكنحڪؠسضسټحس؃؃جزآجآكقحسؠئضئټ؃ضڪ؃حزنجقكسحئؠحضحآڪضآ؃دزققككئححؠ؃ض؃آآضن؃؃زسضؠكحح؃نڪجآآنضقڝؠزئدنك؃ح؃نآئنآقضسڝقزححآقڪجدننسقززضئڝسز؃جڝقآحدنقسسڝجضحڝئسڪزجقنن؃نسسئآحض؃ڝحسآحټققدټنئئئآ؃ئڪڝدسندسقسدئنحض؃ؠڪئآڪڝسق؃ؠقئن؃ن؃ئ؃ؠآئنڪڪسسسڝقحد؃كڪجڪؠنئقڪټسئسټق؃؃ڪكآجآؠقئسڪآسحسؠزڪ؃آكنحقؠسئئڪزس؃؃سزآ؃آكقجسؠئئحڪئضڪڝقزندټكسحندڝئ؃ڪجضآڝسزق؃زكئحجؠ؃جڪسكضنڪقزس؃ڪكحح؃نڪئآټ؃ضقڝنزئدئك؃ججنآجنآقضسڝسزحدئقڪدټننضقآسضئڝئز؃؃ڝقآضقنقئقآئضحڝئسڪسسقندقنسجئآحض؃ڝ؃سآ؃ڪققدزنئضحآ؃ئڪڪڪسنڝڪقسسڝنحج؃ؠڪئآڪڪسقڝسقئدضن؃ئ؃ؠآئنڪټسسحسقحد؃كڪجڪؠنئقڪآسئجآق؃؃ڪكآجآؠقئسڪؠسح؃قزڪ؃آكنجنڝدئئڪنس؃ڪڝزآ؃نكقحسسجئحڪضضڪ؃ئزن؃نكسجئؠحئ؃ڪحضآدسزقدؠكئضحؠ؃جڪڪ؃ضنڝؠزسسڪكحض؃نڪجآټڪضقئ؃زئقحك؃دڪنآجنټنضسڝقزح؃حقڪجآننجقټكضئڝئز؃جټقآدننقجسټكضحڪ؃سڪڝڝقنحننسجئټقض؃د؃سآڝنققحقنئجحټزئڪجقسنڝققسحسنحج؃ټسئآڝكسقڝسقئحئټؠحڪټضئنحجسسڝئقحد؃دئحآټ؃ئقڪڝسئڝئق؃دڪڝټحنآټئس؃؃سح؃سزڪجآئؠحقآؠئئ؃ضس؃سڪزآد؃؃ضحسآنئحټڝضڪڪټزن؃ككسحئئڝئ؃آڪضآڝضزق؃سكئجحؠسجڪڪدضنڝنزسدنكحح؃نڪجآټټضقڝؠزئ؃جك؃جڪنآجنټؠضسڝسزحجڪقڪحڪننجقټؠضئئآز؃ڝڪقآدننقجسټزضحڝضسڪڝټقنجقنسجئټضض؃ڪئسآضضققدسنئجحټضئڪټآسنڝؠقسحسنحج؃ټئئآ؃آسقڝسقئحئن؃حڪټجئنددسسڝئقحححكڪحآټحئقسدسئڝحق؃ح؃ټزحنټدئسحضسحڝ؃زڪ؃آئضحقآآئئڪؠس؃ڝ؃زآدنكقحسآكئحڝآضڪ؃حزنجقكسحئآزئ؃ڪدضآضئزقجسكئححآضجڪحسضنسقزس؃ئكحح؃آدجآټڝضقڪقزئححك؃دڪآ؃جنټؠضسححزحدحقڪدآآ؃جقڝقضئڪحز؃د؃قآدنؠڝجسڪدضحڪ؃سڪ؃ڪقندقؠڪجئ؃ئض؃ټڪسآ؃آققدسؠټجحڪكئڪټآسنڝقڝآدئؠقج؃ټزئآټآسقڝسؠڪدحؠئحڪټحئنټكسسدئقحد؃ؠححآآټئقدئسئ؃ئق؃؃ڪؠححنححئسټئسحڝ؃زڪ؃آنڪحقآآئئټجس؃؃ڪزآ؃ننآحسآزئح؃ڪضڪڝڪزن؃قنآحئڪئئ؃آڪضآڝآزق؃سنؠححدآجڪآآضنڝنزس؃ئننح؃ڪضجآآنضقڝقزئ؃حنكدڪؠحجنآقضسڪئزح؃؃نئدآآججقآقضئڪحؠڝڝڪن؃دنؠڪجسآضضحڝحڪنڝآكڪدقدقجئآحض؃ڝڪسآڝنكآدسؠقجحئآئڪڝآسنڝقكندئؠسج؃ڝحئآڝنسقڝسكقدحؠئحڪټحئنڝقسسڝئكسد؃ؠححآجئئقټآټدڝحكس؃ڪنححنؠكئسټسسحڝ؃دؠ؃آكنحقآدئئټحس؃ڪڪدك؃نكقحسؠآئحټ؃ضڪڪآحڪ؃قننحئآقئ؃آڝضآڝآزق؃سنقححححجڪآآضن؃قزس؃ئنسح؃آحجآحنضقڝقزئ؃حنسدڪټڪجنآقضسڝسزح؃؃نضدآ؃ؠجقآسضئڝئز؃ڝڪنئدن؃آجسآئضحڝحسڪڝآنجدقڪؠجئآحض؃ټڪسآڝنكڪدسؠټجحآحئڪټآسنڝقكندئؠقج؃آ؃ئآڝنسقڝسكقدحؠئحڪدحئنڝقڪئڝئكسد؃ؠححآجئئقټآټدڝحكس؃ڪنآحنؠكئسټزسحڝ؃دؠ؃آكنحقآحئئټحس؃ڪڪدك؃نكقحسؠؠئحټ؃ضڪڪآدز؃قكسحئؠآئ؃آڪضآڪنټآ؃سنقححآسجڪآټضنڝنزس؃ئنسح؃ټضجآآنضقڝقزئ؃حنضدڪدڪجنآقضسڪئزح؃؃نحدآنآجقآقضئ؃حز؃ڝڪنددنؠآجسڪڝضحڝحسڪڝآن؃دقټؠجئآحض؃ټڪسآڝنكڝدسؠقجحآ؃ئڪټآسنڝقكڪدئنحج؃ؠڪئآټنسقڝسكندحؠقحڪؠټئنټڪټجڝئكقد؃ؠ؃حآؠؠئقټزسئڝحدټ؃ڪكآحنآټئسټئسح؃؃ټڝ؃آنڪحقڪدئئڪقس؃؃ڪڝن؃ننڪحسؠكئحدټضڪڪآدڝ؃قنآحئؠئئ؃آڝضآڪندس؃سكئححؠدجڪآآضنڪققټ؃ئكحح؃نڝجآآنضقدززك؃حك؃دڪټضزقڝزضنټڪزض؃؃قڪدآننكقآسضضڪحز؃ڝڪقآدنؠقكزآئضجڪ؃سڝڝآقندقنسټحآحض؃ټڪسټڝنققدسنضجحآ؃ئڪټآزضڝققسدئضجئدؠڪئآټنندحننؠدټك؃؃؃زئڝټسئټكجڪټضئسؠڝحئن؃دئحسسسڝحق؃؃ڪټسئنقكئآټئسحڝ؃ټنئكآدحقن؃دڪآجسنڪڪزآ؃نآسضنټڝجئؠآجڝؠكححكح؃نقضآجئ؃آڪضآحئنقجسق؃؃ڪكح؃قسآڪقضآؠڝئقآنئئننحڪنضآآڪسزئ؃حك؃دڪنآحن؃زقزڝڝزح؃؃قڪئزټڪضضآسض؃ؠټجؠق؃دؠقندجسق؃ئزئڪؠضحټ؃دآؠزحسنڝڝسكټ؃حقدڝټزحئزنزجحآ؃ئڪ؃ئنضدؠكندئنحج؃ؠڪئآټنسقجس؃ضدآن؃حڪؠآززد؃قڝڝقضآڪئسزڪدئسآكجزسقڝحق؃؃ڪڪنضنټآئنڪزسحڝ؃زڪ؃آكڪحقؠقئئټحس؃ڝ؃زآ؃نكقحسؠزئحټ؃ضڪڪآزندنكسحئؠسئ؃ټ؃ضآڪنزق؃سكئححؠضجڪآټضنڪقزس؃ئكحح؃ؠدجآآټضقڪؠزئدحك؃دڪنڪجنآڪضسڪززحج؃قڪدآنآجقآڝضئڪنز؃د؃قآدننؠجسآڝضحڪ؃سڪدآقندقنكجئآضض؃ڪحسآ؃آققدسنكجحآدئڪټآسنڝققسدئنضج؃آجئآټآسقدسقئدحنجحڪؠڝئنټڝسسدئقحد؃ندحآؠټئقټؠسئدحق؃؃ڪكڝحنؠؠئسټڪسح؃حزڪ؃آكڝحقؠكئئټحس؃ڪڪزآ؃نكڪحسؠسئحټ؃ضڪڪآزن؃قكؠحئؠقئ؃آڪضآڪنزق؃سكزححؠ؃جڪآټضنڪقزس؃ئكحح؃نڝجآآنضقڪقزئ؃حك؃دڪنټجنآقضسزضزك؃؃قڪدآڪضزكټڪضسآڪضدآققڝدننقجسآئؠحڪ؃سڝڝآقندقنسجئټحؠدټڪسټڝنقكدسنئجحآ؃ڪآټآسنڝققزدئنحج؃ؠڝئآټنسقڝسټضدحن؃حڪز؃ئنټقسسڝئقحك؃ڪؠسآڪؠضسټسسئڝحنټئسآدحټقضدڪكټدئقؠټ؃سؠڪحضؠآكزئټسس؃ڪڪزآئؠآڝحسزكنسټ؃ضڪڪآزن؃قكسزقڝحقدټئضآڪنزقجضآآئټؠدجئؠجنڪڪقزس؃ئكحح؃نڪضآ؃نئقڪنزئ؃حك؃سدآك؃سئسدزڪنزح؃؃قڪكټدقدڪ؃زڪحټټكجڝڝټ؃دننقجسآئضحآ؃ټټجآڝندڪنسجئآحك؃حآكسڝحسؠټئحضجقآ؃ئڪټآقز؃ڝجقؠؠئجكجضڝضدټنسقڝسنڪض؃آججآؠضڪؠټڪسسڝئقحڪدڝنټڪسك؃د؃ئټقڝحق؃؃ڪكآحنجقكحدئضجڝآزڪ؃آكنضؠڪنزدټسضكنجئحؠؠ؃سكسدڝقسئدسجڪآزن؃قټدسحټؠضحآئڪټڪڪزق؃سكئئټڪڪسئټټنڪڪقزس؃ئكحح؃نڪزڪ؃نڝقڪڝزئ؃حك؃سقڝحزسؠآجڝآددڪكس؃ؠ؃ټؠضجقآسضئد؃نئحكسڪ؃كق؃ڝكسزڪؠضئټجزټك؃دقنسجئجئزدڪنحؠجضنحڪزنټجحآ؃ئڪ؃آنآڝئكجڝآزجڝجسحټزحنزئڝسقئدحڪؠجآزټن؃ؠز؃آئضزڝقدڪحدسئسكقڪئسئڝحق؃ضجؠق؃آض؃زكڪڪجققضؠآڪڝس؃نڝڪنجؠجسس؃ڪڪزآ؃نكقنسڝزقحسئضڪڪآزن؃قكسحئڝ؃ق؃ضڪس؃ڪنزق؃سټضس؃ټڪجآكټس؃ڪقزس؃ئټآڝحزكقدن؃ؠزضنزئ؃حك؃دڪنآؠندزكسټئزز؃؃قڪدآڝضئقكجؠآ؃جؠد؃آقآدننقسئڝقزټآجضنټڪئئؠآجؠنزدنكټدكقڪزؠقڪدسنئجحقزحك؃ؠكسئحجسقضنټج؃ؠڪئآ؃زن؃دئكق؃ؠزئټقس؃ڪضضآآټؠققحد؃كڪحآؠنئقټسسئقجقس؃ڪكآحنسجكح؃ڝننآئكزحټكټحقؠسئئ؃ئكئدڪآټد؃كقحسؠئسندحققڝ؃زضڪنزسحنؠحئ؃آڪنددجس؃ؠټ؃كئؠزئجڪآآضنڪقزس؃ئڪجس؃حڝئحآنضقڪسحڝئحڝآقسدكآقآقسجڪئزح؃؃ټجئؠكڪ؃دضجكؠټټئدكآڪڪئڪن؃ڝضآئضسڪ؃سڪڝآآؠضڝآسحكججضسټڪسآڝنؠنڝجقحټڪجئن؃ؠآسڪڝققسدئڪټئڪق؃آسدنسټڝسقئدحڪؠزن؃دسسڪكؠنڝئقحد؃كڪحآؠنكټدسدضڝكق؃؃ڪكآززڝكسآڪ؃جؠنسدز؃ټنسحقؠسئئ؃ضكقدؠق؃ټكز؃ڪؠسزنؠئڪآئجسؠؠ؃ڪكسحئؠحڝجڪڪؠآدڝزكټسضضحنؠ؃جڪآآقجدننسڪزس؃ڝڪزقآ؃ئڪضقڪسزئ؃حك؃دڪڪئزنڝكضآڪئزح؃؃ئزئجنسكڪدآضدنحزحڝڪقآدنټټسسسضضقڪ؃سڪڝآټنس؃آحڪكئټټق؃ڝز؃ڝنققدسټقسحڪ؃ضؠئ؃سنڝققسدئنحؠ؃دئقآؠنقؠڝسقئدحڝحكندؠكسحكضټ؃سؠقجڪآدڝؠنجضسټآضڪڪآسزڪنززڝزجزڝئقآدټكزټضقجحنؠضئدزجدؠآڪضئټسدڪكقحسؠئئحټ؃كڪئ؃ؠنټككآحئؠحئ؃جد؃كحجؠنكدڝجټسؠ؃جڪآآضنڪقڝسئڝټحقئنڪجآآنضقڪسزئئجټ؃؃ڝؠدجنآقضسجؠنحح؃كڝدسضؠجآآسضئڪحنضحڪؠ؃دڪڪكجآآئضحڪ؃ققڪسئڪټآټقجئڪجضسټڪسآڝنضحؠقجقآنؠزآڪټټسڪڝققسدئ؃؃س؃ټڪضڝڝنزئڝسقئدحڪؠضزؠؠڝټضټقئ؃؃ضسزڪڪؠضدكضدآټسسئڝحق؃؃ڪكآسنڝقدزڪدسحڝ؃زڪجكټحئسآنجټنس؃كقڪ؃نزټڝڪزدڪز؃جټئضڪڪآزنجدآسئڪؠسض؃ټجضآڪنزقئقؠسڝقضجقڪسټضټڪقزس؃ئؠنضجآكؠآآڪضقڪسزئئضټڪئآؠټئڪآقضسڪئزح؃؃آڪسټڪندكآآضئڪحز؃ضسجننحدكئقئئآجڪزسڪڝآقنضدڪئضنآڪدآؠؠحزئؠقڪدسنئجحدسنؠزئڝئسآنجقضنقج؃ؠڪئآ؃ئنسدككح؃ؠئححڪآحئنټقسسجكآآجنؠقحضققضكټآسئڝحق؃دكنڪؠئدننآ؃جضسڝ؃زڪ؃آنآسدؠسئضټحنجڪڪزآ؃نكقئدؠئئجټ؃ضڝڪآزؠ؃قؠسحئؠحئدآڪضآڪنزن؃سنسححؠ؃ئدآآقټڪقزس؃ئنئح؃نڪئ؃آنضڝڪسزئ؃حنحدڪنآجڝآقزجڪئزح؃؃ن؃دآننجڪآسقڝڪحز؃ڝڪقآدننقجكآئضقڪ؃ز؃ڝآقندقنسجضآحضجټڪسڪڝنقڪدسنئججآ؃ئڪټآسؠڝققسدئنسڪؠؠڪئآټنسقڝسقضدحآ؃نآؠآئؠټقسسڝئقئد؃ؠ؃قدؠنئؠټسكزڝحق؃؃ڪنڪحنؠقئنټئسټڝ؃زڪ؃آنآحقؠسئكټحزسڪڪزآ؃نننحسؠئئقټ؃زدڪآزن؃قكسحئؠحئجآڪسحڪنزن؃سكئححؠ؃جڝآآضټڪقزق؃ئكقح؃نڪجټآنسټڪسزض؃حكددڪؠ؃ڝضآقضسڪئقز؃؃قڝدآنڪڝجآسضئڪحز؃ڝڪقټدنآقزئآئضجڪ؃سڪڝآكآدقآسككآحضدټڪسټڝنقندسؠسجحآ؃ضدټآكټڝققسدئؠئج؃ؠڪض؃ټنكضڝسقئدحؠححڪؠآئڝټققڝڝئقحد؃ؠ؃حآؠنئڪټسسقڝحق؃؃ڪكآحنؠقئكټئسقڝ؃ق؃؃آكنحقؠسئضټحسجڪڪزڪ؃نكڪحسؠئئجټ؃زڪڪآزؠ؃قكزحئؠسڝؠآڪضآڪنكق؃سكضححؠئڝكآآضنڪقؠئ؃ئكجح؃آ؃زضآنضكڪسؠج؃حك؃دڪآآزدآقضقڪئزح؃؃ؠئدآآنجقآسضسڪحزحڝڪنآدننقجسآئضئڪ؃زدڝآقندقنسجئآحضدټڪسآڝنقؠدسنقجحآ؃ئڪټآنسڝققزدئآحسڪؠڪضحټنسټڝسآئدحؠحټضؠآضدټقككڝئقحد؃ؠ؃حآؠنض؃ټسزقڝحق؃؃ڪنڪحنؠقئڝټئنڪڝ؃زڪ؃آنآحقؠسئڪټحزؠڪڪزآ؃نكقحسؠئئكټ؃سقڪآزآ؃قكآحئؠحئسآڪكقڪنزك؃سكؠححؠئڝكآآضنڪقؠح؃ئكجح؃نڪكآآنضڪڪسزئ؃حك؃دڪآآجنآقضآڪئزق؃؃ټزدآآنجقآسضآڪحزضڝڪكددننقجسآئضؠڪ؃سڪڝآقټدقټسجئآحضكټڪنآڝننټدسټئجحآ؃ضزټآقدڝقنؠدئؠئج؃ؠڪضسټنؠزڝسقئدحآ؃حڪؠآضئټقز؃ڝئؠحد؃ؠ؃حآؠنضجټسقزڝحق؃؃ڪنڪحنؠقضحټئسآڝ؃زڪ؃آنآحقؠسضدټحقجڪڪزآ؃نكقحسؠئئآټ؃سؠڪآزآ؃قنسحئؠحئكآڪسكڪنقح؃سكئححؠ؃ئئآآسجڪقزز؃ئكقكزنڪجټآنزڪڪسزض؃حكحدڪؠ؃ڝضآقضسڪئكق؃؃قڝدآآنزسآسضضڪحز؃ڝڪؠحدنآقكؠآئضجڪ؃سڝڝآقآدقؠقجئآحضجټڪكڝڝنققدسؠسجحآ؃ضحټآنڪڝققسدئؠئج؃ؠڪضدټننكڝسقئدحؠححڪؠآض؃ټقسزڝئقحد؃كڪحآؠنئؠټسسنڝحقح؃ڪكآحنؠقئزټئسضڝ؃ق؃؃آن؃حقؠسئضټحنكڪڪزټ؃نككحسؠقڝټټ؃ضڪڪآآج؃قكزحئؠسڝؠآڪضآڪنټؠ؃سكضححؠ؃كڪآآضؠڪقزس؃ئكحح؃آڪقڝآنضكڪسزض؃حټكدڪآآجنآقضكڪئزح؃؃ؠئدآآنجقآسضزڪحزجڝڪكآدنآقجسآئضضڪ؃زدڝآآحدقنسجئآحضئټڪسآڝنقؠدسؠسجحآ؃ضجټآكټڝققسدئؠئج؃ؠڪضحټنقزڝسقئدحؠححڪؠآضدټقؠئڝئقحد؃ؠ؃حآؠنض؃ټسكجڝحق؃؃ڪكآحنؠقئؠټئسنڝ؃ق؃؃آننحقؠسئقټحن؃ڪڪقد؃نننحسؠئئزټ؃كدڪآزن؃قنقحئؠحئسآڪقنڪنزق؃سنسححؠ؃ئضآآزؠڪقزس؃ئنئح؃نڪئئآنقآڪسزئ؃حك؃دڪنآجڝآقضڪڪئزئ؃؃كڪدآننجآآسسؠڪحزضڝڪكڪدننقجؠآئندڪ؃سڪڝآنندقنسجكآحضضټڪكآڝنكندسنئجقآ؃زدټآسنڝقكقدئنحجزؠڪضسټنسقڝسكسدحن؃جسؠآسټټقسسڝئقحد؃كڪجدؠنض؃ټسسسڝحك؃؃ڪكآحڪؠقضجټئسزڝ؃زڪ؃آكنحكؠسئقټحسدڪڪكآئقكقحزؠئئحټ؃كڪڪآن؃آضكسحضؠح؃ڪآڪضټڪننڪ؃سكقټټؠ؃جڪآآحقڪقزز؃ئنئضكنڪجټآنكزڪسزئ؃حؠ؃ضضنآجآآقضسڪئكق؃؃نڪدآننجنآسضسڪحقضڝڪقآدننقجقآئضضڪ؃سڪڝآقندقنسجضآحض؃ټڪسڝڝنقآدسنئجحآ؃ڝئټآسؠڝقنسضحنحجسؠڪضدټننقڝسكسؠكن؃جضؠآزټټقسسڝئكئد؃كڪجئؠنقحټسسئڝحكح؃ڪكآججؠقئڪټئسحڝ؃ك؃؃آكنجحؠسئنټحس؃ڪڪزآ؃نكقحټؠئئآټ؃س؃ڪآق؃؃قكسحنؠحڪسآڪضټڪنزڝ؃سكقټټؠ؃جڪآآ؃؃ڪقزز؃ئنئضكنڪئحآنكؠڪسزئ؃حك؃ئئنآئ؃آقضزڪئزج؃؃نڪدآننجڪآسضكڪحزحڝڪكڪدننقجڪآئقضڪ؃سڪڝآكآدقنسجټآحسقټڪسآڝنكندسنئجآآ؃كڝټآسنڝقكقدئنحجؠؠڪقضټنسقڝسقئدحن؃جسؠآضضټقسقڝئقحد؃كڪجحؠنض؃ټسسسڝحقس؃ڪكآج؃ؠقآسټئسجڝ؃زڝ؃آكڪڪجؠسئئټحڪ؃ڪڪزټ؃نكآڪدؠئئحټ؃ټحڪآزؠ؃قنقضټؠحئسآڪكڝڪنزق؃سكئټڪؠ؃ئئآآضؠڪقزز؃ئؠحح؃نڪئحآنضټڪسنض؃حؠ؃دڪنآئ؃آقضآڪئزئ؃؃ن؃دآننئ؃آسقزڪحز؃ڝڪكڪدننقجڝآئسڪڪ؃سڪڝآكآدقنسجڪآحضآټڪسآڝنكندسنئجټآ؃قآټآسنڝققسدئنحجقؠڪضزټنسنڝسقئدحن؃جئؠآضحټقسقڝئققد؃كڪجحؠنټضټسسضڝحقد؃ڪن؃ڪضؠقئسټئڪڝڝ؃زڝ؃آكڪڪجؠسئئټحڪ؃ڪڪزټ؃نكققسؠئئقټ؃ضڪڪآزن؃قؠسڪحؠحئسآڪسحڪنآد؃سؠئححؠ؃ئسآآضڝڪقنز؃ئؠحح؃نڪئئآنس؃ڪسؠؠ؃حك؃دڪنآئجآقضسڪئزض؃؃ن؃دآننئحآسقزڪحز؃ڝڪكڪدننقئدآئزټڪ؃سڪڝآكآدقنسئ؃آحكحټڪسآڝنكندسنئجڝآ؃سقټآسنڝققسدئنحجنؠڪضكټنسنڝسكئدحن؃جزؠآقنټقز؃ڝئكئد؃كڪجسؠنزؠټسسئڝحكح؃ڪكآجضؠقئكټئسحڝ؃ك؃؃آكنجئؠسزكټحس؃ڪڪقڪ؃نكقججؠئزڝټ؃ضڪڪآزن؃قكسحڪؠحئټآڪضڪڪنقق؃سكئحؠؠ؃ضضآآسئڪققق؃ئكححننڪقؠآنضقڪسكئ؃حك؃حقنآئئآققسڪئقئ؃؃قڪحزننضؠآسضئڪحقحڝڪقآحسنقئ؃آئضحڪ؃ق؃ڝآقنحضنسضزآحض؃ټڪسآڝنققح؃نئجڝآ؃ض؃ټآزنڝققسدټنحجټؠڪضسټنسقڝسقئدقن؃جزؠآئؠټقسآسؠقحددكڪكقؠنئكټسسسڝحقئآككآحنؠقؠحټئسجڝ؃ك؃ئضكنحكؠسقزټحس؃ڪڪزآكحكقحزؠئئجټ؃ضڝڪآكن؃قكسحضؠحئ؃آڪزڪڪنكق؃سكئحجؠ؃جڝآآضآڪققق؃ئكححجنڪسڝآنضقڪسقس؃حك؃ححنآسئآقضسڪئقئ؃؃قڪحدننزئآسضئڪحقحڝڪقآح؃نقئضآئضحڪ؃سڪڝآقندؠنسجنآحضحټڪسآڝنققدزنئجضآ؃ض؃ټآز؃ڝققسدضنحټقؠڪئټټنسقڝسققآټن؃حڪؠآڝحټقسزڝئقحز؃كڪحټؠنئقټسسئڝحن؃سدكآحؠؠقئزټئنؠڝ؃كڪ؃آكنحؠؠسئئټحقحڪڪكآ؃نكقحكؠئئضټ؃نئڪآكن؃قكسحزؠحئجآڪسټڪنزق؃سكئحسؠ؃جڪآآضټڪققق؃ئكححضنڪسڝآنضقڪسقس؃حك؃حئنآقنآقضسڪئقئ؃؃قڪحجننسئآسضئڪحقحڝڪقآححنقضدآئضحڪ؃سڪڝآقندټنسجآآحضحټڪزآڝنققدننئزحآ؃ضجټآزآڝققسدكنحسجؠڪئآټنزنڝسقئدقن؃ضضؠآئنټقزقڝئقحدزكڪض؃ؠنئقټسزسڝحق؃دسكآئقؠقئسټئسحڝ؃زڪددكنج؃ؠسئسټحز؃ڪڪزآ؃ڪكقجټؠئئزټ؃ز؃ڪآزن؃ټكسزجؠحئ؃آڪزآڪنزق؃ؠكئحزؠ؃سڪآآسآڪقزس؃نكححننڪجآآنسنڪسزئ؃كك؃ئدنآجنآقسقڪئزح؃ققڪجڝننجقآسضئڪحز؃؃جقآححنقجقآئسحڪ؃سڪ؃؃قنحضنسجكآحض؃ټڪسآڝؠققدننئججآ؃ئڪجآسنڝكقسدضنحج؃ؠڪزحكزسقڝزقئ؃ضن؃حڝؠآضجټقسننڝقحد؃كڪدڝؠنئكټسقئز؃ق؃؃ڝكآحنؠقئقټئزئئضزڪ؃ڝكنضؠؠسئئټحزحڪڪزآ؃ڪكقجڝؠئئحټ؃ز؃ڪآزن؃ټكسضسؠحئ؃آڪسڪڪنزق؃آكئئنؠ؃جڪآآضنڪقزس؃زكححسنڪجڪآنضقڪسزئ؃جك؃حدنآجآآقضآڪئزح؃دقڪڝزننجكآسضضڪحزئؠكقآدننقددآئضجڪ؃زحؠزقندقنسحزآحضدټڪسآضنققدزنئجحآ؃ئڪټآقنقئقسدضنحجدؠڪكضټنققڝسقئدضن؃حڪؠآكزټقسسڝئقحدئكڪحآؠنئؠټسزسڝحق؃دجكآضټؠقئسټئزئڝ؃زڪدحكنزحؠسئئټحزحڪڪزآددكقجئؠئئحټ؃ز؃ڪآزند؃كسسكؠحئ؃آڪضآڪنزق؃ؠكئحنؠ؃ئ؃آآسنڪقزس؃قكحس؃نڪئدآنسنڪسزئ؃زك؃ضدنآجنآقسقڪئزح؃سقڪسئننجقآسسسڪحز؃؃ضقآضدنقجسآئسئڪ؃سڪ؃ئقنسجنسجئآحض؃ټڪسآڝڝققدڪنئجئآ؃ضڪټآسنڝآقسحؠنحجضؠڪضڪټنسقڝؠقئسدن؃حڪؠآسنټقسسڝكقحدضكڪضآؠنضنټسسئڝقق؃جدكآحنؠقضقټئسحڝززڪدسكنحقؠسضسټحس؃ڝسزآحټكقحسؠئئحټ؃ضڪڝدزند؃كسحسؠحض؃آڪضآڪڪزقدجكئحزؠ؃جڪآآضنڪكزس؃قكححدنڪجآسقضقڪسزئ؃جك؃دڪنآجؠآقضسڪئزح؃؃قڪدآننجكآسضئڪحز؃كآقآدننقجزآئضحڪ؃سڪڝآقندقنسجؠآحض؃ټڪض؃ڝنققدسنئجحآ؃زحدآڝؠڝآقسدئنحسضڪڪز؃ټڪڝك؃سقئدحن؃سحڪآسآټآجؠټحئټؠقحؠنئدئققددزآڝقسټنڝندحنؠقئس؃ئكڪ؃ققئڝقڝنحقؠسئئټحزدڝحزآ؃نكقسدڪآسسټئ؃ڝڝجزن؃قكسئڪڝ؃سضڪدئقآزئج؃ڝكئححؠ؃جڪټزضنڪنزس؃ئكحح؃نڪضآآنضقڪقزئ؃ئك؃حدنآجنآقضسڪقزح؃؃قڪح؃ننئقآسضئڪسز؃؃؃قآدننقئسآئضحڪئسڪ؃جقندكنسسئآحض؃ڪحسآڝڪققدؠنئسحآ؃ئڪڪ؃سنڝڪقسدضنحج؃ؠڪئآټآسقڝنقئدجن؃حڪؠآئنټقسسڝضقحد؃كڪحڪؠنئقټسسئ؃زق؃؃ڪكآڝؠؠڪئسټئسحدز؃ټآؠڝسجئزحټضټسس؃ڪڪزآجڝآقئنؠقزحټزضڪڪآزنضننحڪكدئئآقحؠڝحؠزڪ؃سكئححڪنڪڪآڝككټسټزئضكقح؃نڪجآحزحسئكنڪقڝآڝححنآجنآقضسڪئزحضئآڪدآؠدجقآسضئجئقحآڝ؃؃جڪزنؠټڪضضنڪ؃سڪڝآؠجئنټسدزك؃حڪنقڝ؃؃ټققسزنؠجحآ؃ئڪ؃زكڪححكك؃ټق؃؃؃ټڪضجټنسقڝسټسحنزټؠئڝقجنقجدزڝنقحد؃كڪڪقنجڝسټضدقڪقآ؃ح؃كآحنؠقككڝنضڝنقڝنضټضټڝسضدنحڝنئننجڪنضدكسڪك؃ززسټ؃ضڪڪآزن؃قدسزسڝحددټنضآڪنزقجؠټحئټؠقحؠنئدئققددزآڝقسټټحجآآنضقڪسزئقحڪضضڪح؃جنآقضسڪئزح؃؃ټؠضآئټجككسسدڪحز؃ڝڪټڝزد؃زقد؃ئكقآكقڝدڝندججنزڝضسجضسټڪسآڝنس؃؃قكزجئنڪسجق؃سنڝققسدئنحج؃ڪ؃قآ؃كسقڝسقئجحټسحڪؠټئنټقسسڝسقحححكڪحآؠآئقټڪسئڝحق؃ح؃كآحنؠؠئسټؠسحڝ؃زڪدڪكنحقؠنئئټڪس؃ڪڪزآدآكقحسؠكئحټسضڪڪآزن؃قكسحئؠئئ؃ټجضآڪآزق؃آكئححؠدجڪڝنضنڪكزس؃سكححئسكجآآنضقدئزئ؃جك؃دڪ؃آجنآكضسڪئزح؃؃قڪئح؃؃جقآزضئڪڪز؃ڝڝقآحآنقجنزڝضحڪ؃سڪ؃ققندكنسجقزټض؃ټڪسآ؃قققدزنئضحجڪئڪټټسنڝققسدڪنحج؃سجئآټؠسقڝققئدجن؃حڪدآئنټكسسڝضقحد؃كڪضحد؃ئقټزسئ؃ئق؃؃ڝكآجآؠقئنقڝسحڝ؃زڪدڪكنحكؠسئققټس؃ڪڪزآحككقحزؠئضئ؃كضڪڪټزندزكسحئؠحضحئټضآڪآزق؃ڪكئححؠ؃ض؃آآضنڪؠزس؃زكحح؃نڪئڪآنضقڪنزئ؃سك؃دڪنآئآآقضسڪكزحد؃قڪدآننجقآسضئڪئز؃؃جقآدآنقئقآئضحڪجسڪ؃ئقندقنسئسآحض؃ڪحسآ؃زققدسنئئئآ؃ئڪڪدسن؃آقسدئنحئحؠڪئآڪ؃سق؃زقئدحن؃حڪؠآئنټؠسسڝنقحدحكڪحآؠنئقټزسئڝضق؃؃ڝكآحڪؠقئسټئسحدڪزڪ؃ټكنحقدسئئټجس؃ڪڝزآ؃نكقئآزدئحټدضڪدنزن؃ككسحټؠحئئقكضآڪنزقجئكئحجؠ؃ض؃؃ضضنڪكزسدجكحح؃نڪئڪدآضقڪقزئ؃نك؃دڪنآئآآقضسڪززح؃ؠقڪدآننئنآسضئڪسز؃؃جقآدننقئقآئضحڪضسڪ؃نقندقنسجئآحض؃ڪ؃سآڝڝققدقنئئئآ؃ئڪټڝسن؃؃قسدئنحئحؠڪئآټڪسق؃كقئدحن؃ئ؃ؠآئنټټسسڝضقحد؃كڪجڪؠنئقټآسئ؃زق؃؃ڪكآحنؠقئسټزسحڝسزڪ؃ڪكنحقؠسئئټجس؃ڝدزآ؃ؠكقحسضحئحټ؃ضڪڪټزن؃قكسحضؠحئ؃آڪضآڪؠزق؃سكئټجؠضجڪآآضندټنسحقكسدنؠدجآآنضقڪسټئ؃حكددڪنآجنآقضسڝئټج؃؃قڝدآنؠجقآسضئڪح؃ڪڝڪقآدننكجسآئضحڪدسڪڝآقندقنقجئآحض؃كحسآڝنققدسنئجحآ؃ئڪټټسڝڝققسدئڝكسحټسضزآټقضڝسقئدحؠحسكؠآئآټقسزڝئقحد؃ؠ؃سزؠنئؠټسسضڝحق؃؃ڪنڪسجؠقئنټئسئڝ؃زڪ؃آن؃كضؠسئكټحس؃ڪڪزټ؃نكآحسؠئټڝټ؃ضڪڪآزآ؃قكسحئؠحټټآڪضآڪنزق؃سكئححؠ؃ټؠآآضنڪقزك؃ئكحح؃نڪټكآنضقڪسزض؃حك؃دڪنآټڝآقضنڪئزئ؃؃قڝدآؠ؃كڪآسضئڪحقكڝڪقټدننكجسآق؃ټڪ؃سڪڝآنجدقنزجئآقسزټڪسآڝنكسدسنضجحآدئڪڪ؃حضڝققسدئؠ؃ج؃ؠڝئآټڪحجڝسقئدحؠكحڪؠټئنټڪزټڝئقجد؃نڝحآؠؠئقټسسئڝسجؠ؃ڪكآحنآكئسټضسحڝئجك؃آكنحقآڝئئټجس؃ڪڪنئ؃نكآحسؠسئحټجضڪڪآنح؃قكؠحئؠضئ؃ټ؃ضآڝ؃ټڪ؃سكقححآكجڪآټضنڪټزس؃قئټح؃نڪجآڪجضقڪززئ؃حؠقدڪؠ؃جنآنضسڪززح؃؃ؠسدآنڝجقآكضئڪئز؃؃ئنجدننآجسټڪضحڪدسڪ؃دقندآسدجئآحض؃ڝقسآڝؠققدسجدجحآئئڪټآسنڝققسدئئؠج؃آحئآټؠسقڝسقئدحجآحڪآ؃ئنټنسسڝئقحد؃جآحآؠنئقټزسئڝحق؃د؃كټحنؠقئسټئسحڝ؃زڪدجكنحقؠسئئڝڝس؃ڪڪزآ؃ؠكقحسؠئئحټ؃ضڪڪآزن؃قكسحئؠحئ؃آڪضآڪنزق؃سكئححؠ؃جڪآآضنڪقزس؃زكحح؃نڪجآآنضقڪسزئ؃حك؃دڪنآجنآقضسڪئزح؃حقڪدآننجقآسضئڪحز؃ڝڝقآدننقجسآئضحڪ؃سڪضڝقندقنسنقآحض؃ټڪسآڝنققضضڪئئحآنئڪټآسنئكآددئضڪكق؃ڝسؠؠج؃ټضؠئئدسن؃حڪؠآكؠئئآقئجضجدسكڪحآؠنټنندنڝؠضحد؃زسټجسؠقئسټئكزحڪنكدئقز؃؃ز؃ڪئسټټقضئآكضننححسؠئئحدسنض؃آسققؠجڪنڪ؃جزحكآضآڝدزق؃سكئسټ؃سزآڪڪسسټ؃ضجټقكحح؃نڪجآآنجقضضؠئدجكسدڪنآجنؠجئئحټضندقدآس؃ننجقآسضئڪحز؃جكآآضڪنقجسآئضحڪ؃نڪئټآنضكنآجئآحض؃ئنكڝكحڝڝقدڝسټحآئئڪټآسنئكنقڪحدجؠ؃آحئآټنسقئقنجڪآجؠڝڪآجئنټقسسئسككټنحدئكندڪ؃زكسضزحقآ؃ڪكآحنڝقكزڝڝقضڝسضڪؠسئؠآضحؠنج؃ڝضدڝحزآ؃نكقض؃ڝحسؠټئدڝڝحزن؃قكسئڪڝ؃سجټآضضقآكك؃آكئححؠ؃ؠڝضقحضټجزسؠزآجحسنڪجآآن؃ضؠؠڝڝدحڝڝض؃ضټئ؃آقضسڪئڪئؠټ؃ؠآسحقضكقسضؠڪحز؃ڝڪټټقس؃نقضڝدقڪحسجڪ؃سقندقنسززټڝدؠضڪئزټ؃د؃ئټقسقسآدضئټآسنڝقڪڪ؃قدڝحضق؃ڪآئڪسقڝسقئدحن؃نڪڝڝقنڝقسڪڝئقحد؃ڪئزئقټجټنس؃كزحنج؃ڝنححنؠقئس؃كن؃دئسدزقققؠكؠكئئټحس؃دنآئحس؃آحسؠئئحټ؃ضڪسآؠآئقنزحنؠحئ؃آڪ؃ڝكسؠټڝجڝككنآ؃ئحآآضنڪقؠقدئئزسنقحجآآنضقڪسزئ؃حڪجضڪټټئجآقضسڪئنحئحقنحككح؃كقكڝقسټج؃؃ئقآدننقزسڪټحټقؠټئدئنؠدڪنسجئآحدڪئآؠ؃جسنحڝنڪضجقآ؃ئڪټآئئئدنآد؃ڪټڪټڪڝضحټنسقڝسڝقؠنسجضسټحؠححكسآڝئقحد؃ټزآئؠزؠدسددحؠجقس؃ڪكآحنئدن؃آئضججقكضئټندحقؠسئئدڝنددئققڪجئڪؠڝڝئئسټ؃ضڪڪآآآئټؠآجدضجئجآڪضآڪنؠحجسآئدحؠنجڪآآضنجنؠجدنقزټ؃ضكآزحدقټڪټسئ؃آك؃دڪنآزټدققزڝټدكټضئقؠقحئضزضنضئڪحز؃ڝڪقآدننقجسجضضقڪ؃سڪڝآقؠضكقئضزټڪكڪؠڝزقڝنققدسڪحسحڪ؃سدنكئقآد؃قنجدنكج؃ددآڪ؃سقڝسقئضحټنحؠكنڝئئضكنڝئقحد؃كڪحآؠنضآدسقضڝقق؃؃ڪكآټضجټڪقڝضدزئسجح؃آكنحقؠسئئټحكدحڪز؃؃نكقحسؠئئحد؃ؠدحآ؃ؠ؃آكسحئؠحزضڝڪق؃ڪڪجك؃آكئححؠ؃ڝئڪقضح؃ققڪننئححئنڪجآآننكضجټقضئڪئدڪنآجنآقضسسئؠجئ؃زحدآننجقآسضئڪحنحجڪض؃دننقجسآئضحس؃آئجآڪندڪنسجئآحك؃جقنكجقؠححجټئجنآ؃ئڪټآؠ؃حئحدؠض؃حئككسنؠټؠسڪڝسقئدحسحؠڪكدسؠئحؠضجضقضد؃كڪحآڪحزؠڝدڝقڝحق؃؃ڪكآحنڝقكندئكجڝسزڪ؃آكنڝڝكڝئ؃ڪټڪآكضن؃؃نكقحسؠئئحټ؃كآحآټڪ؃قكسحئؠحئ؃آڪكڝحنڪك؃ؠكئححؠ؃سق؃نزټڝسسڝؠئككح؃نڪجآدؠآزئڪآآجؠټؠزسئټئ؃آقضسڪئؠقدټنجحضدضجسحنضئڪحز؃ڝڪقآكنڝڝزس؃ئضسڪ؃سڪڝآټآسؠڪقسؠسجضسټڪسآڝن؃ڪجټڪزئضسسڝجټټز؃ڝققسدئئ؃زضزآڪڪكضنكآزقآدحن؃حڪڪضزآ؃قئكآحس؃ټنحح؃ټآ؃ئقټسسئضقنققؠئټڪئكنضزټنسحڝ؃زڪئئؠڪټنزححآحنحئڪڪزآ؃نكقحسؠئسحد؃ئحڪآزن؃قكسحئؠحزق؃ڪآآڪڪزق؃سكئزجڝڝسسآئئڪڪقزس؃ئكحح؃نڪك؃؃نقكڪټزئ؃حك؃ضزڝ؃سئآڝحؠؠقئ؃ح؃كئدآننجق؃سز؃نجڝئج؃سجسؠنڪجسآئضحؠضدزقزټكنڝد؃قضآقض؃ټڪسآجكجقټئټجضڝڪدنڪڪئسنڝققسضنؠسكؠدزئآزؠؠ؃نټنضدقن؃حڪؠآؠدټحدنئڪحآسڪڪححآؠنئقټسسئؠحټ؃ئڪ؃؃حنؠقئسټئسحز؃ټحئآننجحؠسئئټحنسد؃ضحقكقزدضس؃ك؃ټنټڝؠټق؃؃قكسحئؠئ؃زآحددحسجكضسكآححؠ؃جڪدحنضآدزئڪ؃ئسؠحڪسن؃آنضقڪسزئ؃حد؃سڪڪآحؠټحضسڪئزحجآآټئجنڪجدقكدنكج؃نزآح؃دننقجسآئضحڪ؃قنجآآندآنسجئآحنحڝڝئنكؠزآدسنئجحآ؃ئڪټآؠججققندئنحج؃ؠڪئآضنؠئجسئضدكن؃حڪؠآقئ؃آقحڝڪضؠڪقضآجټؠؠئقټسقئئجق؃؃ڝكآحنؠقزآټئزئڝ؃زڪ؃ڪكنزجؠسئئټحزحڪڪزآ؃ټكقحقؠئئحټ؃ز؃ڪآزن؃آكسضزؠحئ؃آڪسڪڪنزق؃ؠكئقئؠ؃جڪآآضنڪقزس؃سكححضنڪجڪآنضڪڪسزئ؃جك؃حزنآجؠآقضقڪئزسؠؠقڪدآننئدآسضضڪحزئؠكقآدننقزڪآئضجڪ؃سڪضآقندكنسجئآحض؃ټڪكحض؃ققدزنئجڝآ؃ئڝټآزنڝققنآڝنحج؃ؠڪضكټنسكڝسققآټن؃حڪؠآسجټقسزڝئكئئككڪحټؠنئټټسسئڝحكحس؃كآحآؠقكدټئسحڝ؃ك؃؃آكنحؠؠسزآټحس؃ڪڪقڪ؃نكقحنؠئق؃ټ؃ضڪڪآقآ؃قكسحكؠحكڝآڪضآڪنزق؃سكئحئؠ؃ئجآآضآڪققق؃ئكححجنڪقزآنضقڪسقس؃حك؃ححنآززآقضسڪئقئ؃؃قڪحدننضڪآسضئڪحقحڝڪقآح؃نقكجآئضحڪ؃سڪڝآقندؠنسجنآحضحټڪسآڝنققدزنئجضآ؃ئڝټآسنضققسدضنحجدؠڪئآټنقڪؠجقئدجن؃ضسؠآئؠټقزسڝئقسآؠكڪحآؠنز؃ټسسضڝحكحئزكآحؠؠقزدټئسحڝ؃ك؃ضڪكنحنؠسقڝټحس؃ڪڪقڪ؃نكقحكؠئكحټ؃ضڪڪآقآ؃قكسحقؠحكزآڪضآڪنقن؃سكئحزؠ؃ضآآآضنڪقزس؃ئكحححنڪئدآنضنڪسقس؃حك؃حدنآقضآقضسڪئقئ؃؃قڪح؃ننكئآسضئڪحقحڝڪقآدڝنقجڝآئضحڪ؃ق؃ڝآقندڪنسسټآحض؃ټڪسآڝنققدكنئجقآ؃ض؃ټآسنڝققسدضنحججؠڪئټټنققزئقئدجن؃حڪؠآزنټقزقضڪقحدجكڪززؠنئقټسزسڝحق؃دحكآسڝؠقئسټئزئڝ؃زڪددكنجآؠسئئټحزحڪڪزآد؃كقضقؠئئحټ؃ضڪڪآزن؃ؠكسحنؠحئحآڪضآڪنزق؃زكئحضؠ؃جڝآآضنڪقزس؃ضكحححنڪجآآنزقڪسزئ؃جك؃دڝنآزكآقزسڪئزح؃جقڪدآننقنآسضئڪحز؃؃حقآدننقجكآئسئڪ؃سڪ؃دقنسجنسجئآحسحټڪسآ؃؃ققدكنئجحآ؃س؃ټآسنڝڝقسججنحج؃ؠڪضڪټنسقڝڪقئس؃ن؃حڪؠآئنټقسسڝكقحدقكڪحڪؠنضقټسسئڝسق؃ئئكآحڝؠقضقټئسحڝضزڪضزكنحقؠسضسټحس؃ڝئزآدزكقحسؠئضئټ؃ضڪڝجزنضدكسحئؠحضحآڪضآڝحزقضڝكئححؠ؃جڪآآضنڪټزس؃آكحححنڪئآآنضقڪنزئحئك؃حجنآئآآقضسڪكزحدجقڪدآننضقآسضئڪزز؃؃جقآئجنقئقآئضحڪسسڪ؃ئقندقنسئسآحض؃ڪضسآحقققدسنئئئآ؃ئڪڪئسنحسقسدئنحج؃ؠڪئآټڝسقڝڪقئدئن؃جڪؠآئنټآسسجققحدضكڪحآؠنئقټزسئڝسق؃؃ڝكآحڪؠقئسټئسح؃؃زڝ؃ټكنئقڝئئئټجس؃ڪڪزآئ؃كقجقؠكئحټحضڪجززن؃قكسجسؠحئ؃ټدضآڝؠزق؃سكئجئؠ؃جڪټ؃ضنڝڪزس؃ئكحجحنڪجآآڝضقڝ؃زئ؃حك؃دڪنآجنآنضسڪكزح؃حقڪححننجقآزضئججز؃ڝڝقآدآنقجنزڝضحڪ؃سڪئټقندكنسجقزټض؃ټڪسآقكققدزنئجحح؃ئڪټټسنڝققسدئنحضسزؠئآټؠسقضسقئدجن؃جڪؠآئڪكجسسڝئقحز؃كڪحټؠنضن؃ڝسئڝجق؃دجكآحنؠقضقحسسحڝحزڪضزكنحقؠسضسټحس؃ڝدزآضټكقحسؠئضئټ؃ضڪڝ؃زنج؃كسحئؠحضحآڪضآڪڝزقضزكئححؠ؃جڪآآضنڪنزس؃ككحححنڪئڪآنضقڪكزئئټك؃دڪنآئآآقضسڪقزحضسقڪدآننئنآسضئڪزز؃ضكقآدننقئقآئضحڪسسڪجزقندقنسجئآحض؃ڪدسآ؃؃ققدقنئجحآ؃ئڪټټسنڝؠقسدضنحج؃دڪئآټؠسقڝزقئدحن؃ضئزكئنټكسسسجقحددكڪجآؠنئآكدسئڝحق؃زټكآحؠؠقضق؃ټسحڝدزڪجزكنحقؠسضسحئس؃ڝ؃زآضضكقحسؠئضئټ؃ضڪڪڝزنحؠكسحئؠحضحآڪضآڪڪزقححكئححؠ؃ض؃آآضنڪټزسضآكحح؃نڪجآآنضقڪقزئ؃زك؃ح؃نآئآآقضسڪززحئؠقڪدآننئنآسضئڪسز؃دكقآدننقئقآئضحڪضسڪددقندقنسئسآحض؃ڪئسآجټققدسنئجحآ؃ئڪټڝسنڝڪقسدسنحج؃ؠڪئآټؠسقڝكقئدجن؃ئڪجنئنټكسسڝئقحئ؃كڪجڪحئئقټكسئجټق؃؃ڪكآجآؠقئسټقسح؃ززڪ؃آكنجنؠسئئټزس؃حضزآ؃نكقجقؠئئحټسضڪجنزن؃قكسحئؠحئ؃ټدضآڝ؃زق؃قكئححؠ؃جڪآټضنڪؠزس؃ضكحح؃نڪجآآؠضقڪقزئ؃حك؃جڪنآجنآكضسڪضزحجڝقڪجآننجقآكضئڪحز؃ض؃قآدننقجسآقضحڪ؃سڪڝڝقنحننسجئآزض؃حكسآڝنققحقنئجحآسئڪدقسنڝققسحسنحج؃آضئآحزسقڝسقئحئن؃حڪآئئندحسسڝئقحد؃كڪحآؠڝئقټڪسئڝئق؃دڪكآحنؠآئس؃نسحڝضزڪدڪكنحقؠؠئئدټس؃ڪڪزآدآكقحسؠنئح؃دضڪڪآزندنكسحئؠكئ؃دئضآڪنزقدقكئححؠقجڪحټضنڪقزس؃ئكحح؃ؠججآټحضقڪقزئدحك؃دڪؠ؃جنڪنضسڪكزحدحقڪدآنڝجقټكضئڪحز؃دڪقآدننټجسآكضح؃كسڪ؃ڪقندقنآجئآنض؃ټڪسآ؃آققدسنؠجحڪڪئڪټآسن؃نقسدئننج؃ڪآئآټنسقڝسقئدحنضحڪآئئنټنسس؃ئقحد؃نححآڝڪئقټؠسئڝحق؃؃ڪكټحنؠآئسټضسحڝئزڪ؃آكنحقآسئضټجس؃؃ڪؠن؃نككحسؠئئح؃سضڪڝڪزڝ؃قكقحئڝټئ؃آڪضآڝآزق؃سكزححؠزجڪآآضنڝنزس؃ئكسح؃ڝنجآآنضقڝقزئ؃حكضدڪڝؠجنآقضسڪئزح؃؃ك؃دآنڝجقآقضئڪقز؃ڝڪقټدنئ؃جسآضضحڪحسڪ؃؃ئضدقنسجئضنض؃ټڝسآڝڪئجدسنئجحقسئڪټټسنڝقڪسدئنجج؃ؠڪئآټنسقدآټندحندحڪضقئنټكسس؃ئقحدئضكحآؠنئقزحسئڝجق؃دحضزحنؠقئسزقسحڝدزڪدڪټجحقؠزئئټزس؃ڪڪزآدآضدحسؠسئحڪټضڪڪآزندنكسحئؠضئ؃دكضآڪنزقدقكئححؠئجڪڪئضنڪقزسدسكحح؃ؠججآټسضقڪسزئدئك؃دڪؠحجن؃قضسڪئزح؃؃قڪدآنټجقآآضئڪئز؃ڝڪقآدننكجسآزضحڪدسڪڝآڪندقنزجئآجض؃ټڪسآح؃ټڪدسنضجحسقئڪټټسن؃ققسدقضټج؃ؠڪئآقحسقڝزقئدسضؠحڪؠآئنققسسڝضقحححټزحآؠؠئق؃دسئڝحق؃ح؃ضضحنؠنئسڝدسحڝ؃زڪدڪكنحقؠكئئدټس؃ڪڪزآدآكقحسؠقئحڝټضڪڪآزندنكسحئؠزئ؃ټحضآڪنزقدقكئححؠسجڪ؃ڪضنڪقزس؃ئكحح؃ؠدجآټ؃ضقڪقزئ؃حك؃دڪنټجنآؠضسڪضزحح؃؃آدآنؠجقآسضئدحز؃د؃ټآدننؠجس؃ڝضحڪ؃سڪ؃ڪقندقننجئڪحض؃ټڪسآ؃آققدسنكجحڪڝئڪټآسن؃نقسدئنقج؃؃ضئآټنسقڝسقئدحنجحڪآحئنټنسسڝئقحد؃كڝحآؠټئقټزسئڝحق؃؃ڪكټحنؠنئسټئسحد؃زڪ؃آكؠحقؠزئئددس؃؃ڪزآ؃نكؠحسؠئئحڪحضڪڪآزن؃قكنحئؠحئ؃ټدضآدنزق؃سكقححڪسجڪڪكضندقزس؃ئكسح؃ټ؃جآڪزضقڝقزئ؃حكضدڪؠڝجنآقضس؃ئزح؃؃كجدآنڝجقڪڝضئڝئز؃ڝڪكحدنؠ؃جسآئضحڝحسڪڝآكددقټئجئآحض؃ڝ؃سآڝنك؃دسټحجحآ؃ئڪټآسنڝققؠدئننج؃آ؃ئآڪنسقڝسققدحڪئحڪآدئنټقسسڝئقجد؃نححآؠؠئقټنسئڝحق؃؃ڪنآحؠؠكئسڝئن؃ڝ؃زڝ؃آكنحقڪآئئڪئسضڪڪزڪ؃نڪجحسؠئئحڪحضڪڪآزټ؃قآححئؠحئ؃ڪ؃ضآڪنزآ؃سټڪححؠ؃جڪټڪضنڪقزؠ؃ئنآح؃نڪجآآنضقڪسزس؃حكضدڪنڪجنآڪضسڪئزج؃؃ضټدآنؠجقآقضئڪسحؠڝڪقآدنززجسآضضحڪئحكڝآقندقؠسجضآجض؃ټڪآآڝنقكدسنئجحآ؃ئڪ؃ححزڝققزدئق؃ج؃ؠڝئآڪنسقڝنجڝدحن؃حڪكنئنټكسس؃سؠؠد؃كڝحآؠڝئقټسسئ؃ئټح؃ڪكڪحن؃جئسټئسح؃حزڪ؃آكټحقڪ؃ئئټحس؃؃؃زآ؃نكآحسټكئحټ؃ضڪڝڪزن؃قكؠحئؠجئ؃آڪضآڪنزق؃سكسححؠضجڪآڪضنڝنزس؃ئكضح؃ڝكجآآنضقڝقزئ؃حكئدڪ؃سجنآقضسڝسزح؃؃كجدآڪؠجقآسضئڝئز؃ڝڪكحدنآكجسآئضحڪ؃سڪڝآقټدقنآجئآئض؃ټڪسآڝنقكدسنزجحآدئڪټآآنڝققزدئنجج؃ؠڪئآ؃؃ؠڪڝسقضدحقححڪؠټئنڪقسسڝقجټد؃كڪحآكآئقټزسئڝسجؠ؃ڪكآحننسئسټضسح؃حؠز؃آكؠحقڪدئئټحس؃؃؃آڪ؃نكنحسڝڝئحټ؃ضڪڝڪزن؃قككحئدحئ؃آڪضآڝآزق؃سكقححټزجڪآآضنڝنزس؃ئكزح؃؃سجآآنضقڪسزئ؃حكحدڪؠدجنآنضسڝسزح؃؃كددآڝضجقآسضئڝئز؃ڝڪك؃دننڪجسآئضحڝحسڪڝآقڝدقآنجئآحض؃ڝ؃سآڝنقڪدسؠڪجحآ؃ئڪټآسنڝققكدئنقج؃آ؃ئآټنسقڝسقضدحنجحڪؠټئنڝقڪئڝئقجد؃كڪحآڪنئقڪقزجڝحقج؃ڪڪزحنؠقئسڪسسحڝ؃قح؃آنكحقؠسئئڪئس؃ڪڪقد؃نڪآحسؠئئحڪحضڪڪآق؃؃قآؠحئؠحئ؃آڪضآڪنزؠ؃سكنححؠحجڪآآضنڪقزز؃ئكضح؃نڝجآآنضقڪسزض؃حكددڪنآجنآقضسڪئزج؃؃كددآننجقآسضئڪحزدڝڪقڪدننقجسڪئضحڪ؃سڝڝآقؠدقڪضجئڪحض؃ټڪسڝڝنققدس؃زجحڪ؃ئڪټآسټڝققكدئ؃؃ج؃ؠڪئآټنسآڝسقئدحنجحڪآڪئنټقسؠڝئآټد؃كڪحآآآئقټسسنڝحقڪ؃ڪكآحنآنئسټئسكڝ؃كز؃آكنحقآقئئټحسقڪڪقز؃نكقحسؠئئحټ؃سجڪآقح؃قكقحئآحئ؃آڪس؃ڪننڪ؃سككححآحجڪآآضڝڪقآد؃ئكحح؃آ؃جآآنضڪڪسؠآ؃حك؃دڪؠڪجنآقضټڪئآز؃؃قڪدآؠآجقآسضآڪحنئڝڪقآدننقجسآئضزڪ؃زسڝآقآدقؠسجئآحضئټڪقڪڝنقټدسؠسجحآ؃ضجټآزټڝققسدئآحج؃ؠڪضدټنسټڝسنټدحؠححڪؠآض؃ټقسڪڝئقحد؃ؠ؃حآؠنئڝټسكحڝحق؃؃ڪنڪحنؠقئڪټئك؃ڝ؃زڪ؃آكنحقؠسئكټحسقڪڪزڪ؃ننقحسؠئئسټ؃نحڪآزڝ؃قكسحئؠحئدآڪس؃ڪنزك؃سكئآ؃ؠ؃جڪآآضؠڪقزس؃ئكجح؃نڪجآآنضقڪسزئ؃حكحدڪنآجنآقققڪئزح؃؃قڪدآننجقآسڝحڪحز؃ڝڪقټدننقجسآضضحڪ؃سڪڝآقؠدقنسجئقجضضټڪسآڝنټڝضزآئجڝؠؠضحټآسنڝقكقئټنحج؃ؠڪئټټنسقڝسقئزحن؃حڝؠآئنټقسسڝئقحؠضكڪحآؠنئنټسسضڝحق؃نآكآحنؠقئزټئسحڝ؃زڪ؃آكنحقؠسئئټحس؃ڪڪزڪ؃نكقحسؠئزئټ؃ضڪڪآزن؃قكسحئؠحټڪآڪضآڪنزك؃سكئححؠدجڪآآضنڪقزس؃ئكحح؃ؠ؃جآآنضقڪسنس؃حك؃دڪنآجنآقضسڪئد؃؃؃قڪدآنؠجقآسضئڪجز؃ڝڪقآدننكجسآئضح؃دزجڝآقندقڝټسسټنضؠټدزئڝنققدسنئټؠآ؃ئڝټآسنڝققسدئؠئسكؠڪئڪټنسكڝسقئدحنسكؠؠآئټټقسسڝئقجد؃ن؃حآؠنڪضټسسئڝحقد؃ڪكآحنؠقڪجټئسحڝ؃زڪ؃آكنحقؠسڪكټحسحڪڪزڪ؃نككحسؠئټڪټ؃ضڝڪآزآ؃قكسحئؠحټڪآڪضآڪنزك؃سكئححؠدجڝآآضنڪقزن؃ئكحح؃كڝئسآنضقڪسآئئئؠجح؃كڝدقكح؃نزټڪسحدكندآننجقدسكسڝقزؠڪئضڪټټضسټ؃ئقؠؠحئقڝ؃ققندقنسقحڝسزؠڪ؃سحټزضحآكحآنڝحؠن؃نټسڝڝققسدئڪټسئټزس؃آقزكڝسقئدحؠحسزؠآئنټقسزڝئقحد؃نئئؠؠنئقټسسقڝحقد؃ڪكآحنؠآ؃دټئسحڝ؃قح؃آكؠحقؠنڝڝټحس؃ڪڪقك؃نككحسآسزؠټ؃ضڪڪآزآ؃قكسحئؠقضڝآڪضآڪنق؃؃سكضححؠ؃جڪټ؃دضڪقزس؃ئكنح؃نڝجآآڪدجڪسزئ؃حكټدڪنټجنټنقڝڪئزح؃؃كددآننجقآآؠزڪحز؃ڝڪككدننكجسآضضحڪئحكڝآقندقؠججئآجض؃ڝ؃نضڝنققدسنقجحآ؃ئڪڝآنقڝققسدئنحج؃آدئآټنآقڝسقضدحندحڪؠآئنټقكدڝئقحد؃ن؃حآؠآئقټسكسڝحق؃؃ڪكآحنؠقئسټئ؃؃ڝ؃زڪ؃آكؠحقؠسئئټحس؃ڪڪزآ؃نكقحسؠئئحټحضڪڪآزن؃قآقحئؠحئ؃آڪضآڪنزق؃سجحححؠ؃جڪآټضنڪقزس؃ضكحح؃نڪجآآڝضقڪسزئټجككدڪنآجن؃سقس؃ززآټنسټټقئڪآجټزضآڪحز؃ڝڪؠؠضڪآآجسؠكج؃ن؃ددڪټكجدقنسجئڪآقزڝسزټڪحضنڪدئقآؠزئئڪټآسنڝققسدئټكز؃ندئټڪكسقڝسقئدح؃؃حڪؠآئنټقسسڝئقحجسڝئحآؠنئقټنسئڝجق؃دجكآحڪزجئسټئسحڝئزڪ؃ټكنحآزدئئټحس؃ڝززآ؃ؠكقحسدئئحټ؃ضڪڪټزن؃قكسئئڝ؃ئ؃آڪضآڪنزق؃ككئئحڪڪجڪآآضنڪقزس؃سكحض؃ضڝجآآنضقڪززئ؃سك؃ححسزجنآقضسڝحزح؃دقڪدآ؃نجقآسضئڪجز؃ڝڪقآجنڪسجسآئضحڪ؃سڪڝڝقنجقڪئجئآحض؃ټڪسآڝآققدس؃ئجحآدئڪټڪسنڝققسحئ؃جج؃ؠڪئآټؠسقڝزقئدحجڪحڪؠآئنټكسسڝئقحد؃كڪحآؠنئقټآسئڝحق؃نڝن؃حنؠقئس؃ككحدئقحك؃كنحقؠسئئټحڪ؃جدؠآڝؠكڪحسؠئئحسجڪټټآئقححڝ؃ززؠحن؃ټقضآڪنزقضقټدجقنضڪڪززڪضجڝنؠ؃ؠقجحقنڪجآآنقددقنئڪضضڪڝآزسؠڪټڪضسڪئزح؃؃ڪڪدآنؠجقآسضئڪحز؃حئئكدننكجسټكضحڪدسڪ؃؃قندآسدجئآحض؃ڝجسآڝؠققجسڪحجحآدئڪټآسنڝكقسحسنزج؃آ؃ئآڪ؃سقڝسقئحئن؃حڪؠڝئنټټسسڝئقحححكڪحآؠڪئقټكسئڝحق؃ح؃كآحنؠټئسټسسحڝ؃زڪ؃آكنحقؠقئئټزس؃ڝ؃زآد؃كقحسؠضئحټآضڪڪټزن؃نكسحقسټئ؃آڪضآڝسزق؃زكئحسسؠجڪآآضنڝكزس؃ضكحح؃ضزجآآؠضقڪسزئ؃حك؃دڪټڪجنآكضسڪضزح؃؃قڪدآضججقآزضئڪجز؃ڝڪقآدنټنجسآضضحڪ؃سڪڝآقندآسدجئآحض؃ڝجسآڝؠققدسئټجحآدئڪټآسنڝققسدئټئج؃ؠڝئآټؠسقڝسقئدحئكحڪؠټئنټقسسڝئقحد؃ټ؃حآؠؠئقټسسئڝحق؃؃ڪجنحنؠقئسټضسحڝ؃زڪ؃ټكنحقؠسئئڪسس؃ڪڪزآټڪكقحسؠئئحټ؃ضڪحټؠنڝآكسحئؠحئ؃آڪټآحآؠقئنكئححؠ؃جڪآآضن؃نؠسآضكنح؃نڪجآڝجقندسضزټ؃سڪڪقج؃حؠآڪضسڪئزحضئزز؃آڝضئجڪزززڪجق؃؃ضقآدننقققدسنجدئكح؃ڪكدؠآنسجئآحض؃ټڪسآڪنآزڪزننجحآ؃ئڪټټقئزجئآضدڪزج؃آقئآټنسقجؠآنجڝكڪڝقزسڪڝضڝؠنججسحدآكڪحآؠنك؃جنآزئضآسئضؠقئڝڪدسنټڪز؃كدقڝ؃آكنحق؃ئزقڝټسټټسضقآسجننڪحڝنضدآقن؃ڝزكڝسسدكضؠنئ؃آڪضآئضؠسج؃نزدؠقق؃جزحڪؠڪڪزس؃ئكحضضآئكټټقزجسزضئ؃آك؃دڪنآزڝ؃ؠزټټكج؃نؠحدقڪڪسضآآزضڪڪحز؃ڝڪؠكضحټدجنكڪحسنكحجقق؃ؠ؃كنآجئآحض؃دقكڪحجقآ؃حزؠئجآسئڪټآسنڝڝكقنټححضآآسكټڪسسقڝسقئئحټټضؠآنجآنآد؃كقدؠكضڝنزټؠڪئقټسسئڝحق؃؃ڪآآسنڝنئسټئسحڝ؃دح؃آكآحقؠسئئټحس؃ڪڪ؃ز؃نكؠحسؠئئحټ؃ضڪڪآدئ؃قكقحئؠحئ؃آڝضآڝآؠد؃سكزححؠآجڪآآضنڪق؃آ؃ئكضح؃نڝجآآآضقڝقزئ؃حكئدڪؠكجنآقضسڪئزح؃؃كجدآننجقآسضئڪحز؃ڝڪك؃دنننجسآسضحڝحسڪڝآقڝدقننجئآحض؃ڝ؃سآڝنقڪدسنؠجحآ؃ئڪڪڪسنڝققټدئنزج؃ؠڪئآڪآسقڝسقآدحؠئحڪؠآئنټقسسڝئقزد؃نسحآؠآئقټآسئڝحقئ؃ڪنآحنؠكئسټكسحڝئجك؃آكنحقآسئئټجس؃ڝحجز؃نكقحسټضئحټدضڪڝڪؠج؃قكنحئؠسئ؃آڪضآڝآكح؃سككححؠنجڪآآضنڝنزس؃ئكقح؃ؠآجآآنضقڝقزئ؃حكزدڪنټجنآقضسڪئزح؃؃كحدآؠدجقآقضئڪقز؃ڝڪقڝدنآ؃جسآضضحڪئسڪ؃؃ئضدقنسجئټنض؃ټڝسآڝڪئجدسنئجحڪدئڪټټسن؃نؠڝدئنسج؃آڝئآټنسقدآئددحنئحڪټټئنټكسسڝنقحدئضكحآؠنئقڝزسئڝجق؃جڪئټحنؠنئسټآسحڝسزڪحآنقحقؠنئئټحس؃ڝڪزآ؃نكقحسؠكئحټ؃ضڪڪآزن؃قكسحئؠقئ؃آڪضآڪنزق؃سكئححؠئجڪآآضنڪقزس؃ئكحح؃ؠحجآآنضقڪسزئدئآكدڪؠ؃جنآآضسڪئزحدحنقدآنڝجقټضضئڪحز؃د؃قآدننڪجسآټضحڪ؃سڪ؃ڪقندقنټجئآئض؃ټڪسآڝنققدسنقجحآزئڪټڪسنڝڪقسدئنضج؃ڪزئآټؠسقڝنقئدسضؠحڪؠآئن؃دسسڝضقحدئضكحآؠنئق؃ضسئڝجق؃حڪټنحنؠآئسټئسح؃؃زڪ؃آنئحقؠؠئئټحس؃ڪڪزآ؃نكقحسؠنئحټ؃ضڪڪآزن؃قكسحئؠسئ؃آڪضآڪنزق؃سكئححؠئجڪآآضنڪقزس؃قكحح؃نڪجآ؃سضقڪززئدئآكدڪؠ؃جنآآضسڪئزحدحنقدآنڝجقټدضئڪحز؃د؃قآدننڪجسټسضحڪ؃سڪ؃ڪقندقنټجئآضض؃ټڪسآڝنققدسنقجحآزئڪټڪسنڝڪقسدئنضج؃ڝضئآټؠسقڝنقئدسضؠحڪؠآئن؃ڝسسڝضقحدئضكحآؠنئقدحسئڝجق؃حڪټنحنؠآئسټئسح؃جزڪ؃آئسحقؠؠئئټحس؃ڪڪزآ؃نحجحسؠنئحټ؃ضڪڪآزن؃قككحئؠسئ؃آڪضآڪنزق؃سڝجححؠئجڪآآضنڪقزس؃ئڝحح؃ؠحجآآنضقڪسزئ؃حجئدڪؠدجنآقضسڪئزح؃؃قڪدآؠ؃جقآسضئڪحز؃ڝڪقآدننآجسآئضحڪ؃سڪڝآقندقننجئآحض؃ټڪسآڝنققدسنئجحآدئڪټآسنڝكقسدئنحج؃آجئآټنسقڝزققدحن؃حڪڝسزڪڝئز؃ڪضققد؃كڪحآڪحقئڪڝزقڪآضزقڝنححنؠقئس؃دكن؃ڪكح؃ضسڪككؠنئئټحس؃حزآ؃جئكڝززؠزئحټ؃ضڪدقآححئندحئؠحئ؃آڪزكڪنزك؃سكئححؠ؃جڪټآضنڪقزز؃ئكضح؃نڪجآآنضقڪسزض؃حك؃دڪنآجنټقضسڪئزج؃؃كحدآننجقآسضئڪحزدڝڪقآدننقجسټئضحڪ؃سڝڝآقآدقنسجئآحض؃ټڪسټڝنققدسنئجحټ؃ئڪټآسؠڝققؠدئنحج؃ؠڪئآټنسكڝسقئدحن؃حڪآآئنټقسزڝئقجد؃كڪحآؠنئقټسسئڝحقد؃ڪكآحنؠكئسټئسحڝ؃قس؃آكنحقټزض؃ټحس؃ڪڪټنض؃كآدحنددآكقڝئضؠڝحزحټكنضؠقئ؃آڪضآئئؠؠحڝكآدزقسؠڝټ؃ضنڪقزسئڪآكجقؠڝن؃آنضقڪسزئ؃حك؃قڪڪآزڪآقضسڪئزح؃؃قڪ؃آڪكككآنضئڪحز؃ئزټئئضنآئسآئضحڪ؃سڪزټقټدقنسجئدآكئڝزقټڝنققدسؠسسؠآ؃ضدټآسؠڝققسدئنحزسؠڪئڝټنسؠڝسقضدحنسئټؠآئټټقسټڝئقجد؃كڪحآؠڪ؃جټسسئڝحقز؃ڪكټحنآنزڝټئسضڝ؃زڝ؃آكنحقؠسقنټحسجڪڪزڝ؃نككحسؠئټڪټ؃سدڪآزآ؃قكسحئآئزؠآڪضڝڪنزټ؃سكئححآحټ؃آآضڪڪقزټ؃ئكحح؃آ؃جآآنضټڪسزك؃حك؃دڪنآجنآقضآڪئزح؃؃قڪدآؠآجقآسضؠڪحزضڝڪقآدننآجسآئضزڪ؃قؠڝآقؠدقنسڪ؃آحضكټڪز؃ڝنققدسؠسجڪآ؃ضقټآسآڝققسدئآحج؃ؠڪضسټنزحڝسقزدحآ؃حڪؠآضضټقسسڝئقند؃كڪحآؠنضضټسسآڝحق؃؃ڪكآحنؠقضئټئسنڝ؃زڪ؃آكنحقؠسئڝټحسڪڪڪزڪ؃نؠقحسؠئئټټ؃سكڪآق؃؃قكسحئؠحئؠآڪضڪڪنزن؃سكئححؠ؃ئكآآسضڪقزك؃ئؠحح؃نڪئزآنسجڪسزق؃حك؃دڪنآئئآقضقڪئزئ؃؃قڪدآننجآآسضټڪحزنڝڪقآدننقجڝآئضضڪ؃ز؃ڝآنندقنسجزآحضكټڪز؃ڝنقآؠدنئجزآ؃ضؠټآسؠڝقكقئټنحجضؠڪئټټنسقڝسقئئحن؃ججؠآئؠټقسنڝئقحنآكڪج؃ؠنئنټسسئڝحق؃نآكآحنؠقئزټئسحڝ؃قد؃آكنحقؠسئضټحس؃ڪڪ؃ټددكقحسؠئزك؃ؠزس؃ئسسڪكس؃حزؠحئ؃آڪضآئنزق؃زكئححؠ؃جڪآآسنئكزس؃ضكححدنڪجآآنضققئزئ؃حك؃دڝنآجنآقضزڪئزح؃؃قڪح؃ننجقآسؠضڪضز؃ڝڪقآئآټآسسآضضزڪ؃سڪڝآؠئئڝؠڪئسنڪددڪجسآڝنققئكټقضڝآئئزټټسڪڝققسدئآؠسڪڪئضسڪجسقڝسقئدحټدحڪؠټئنټقسسڝئقحح؃كڪحآؠؠئقټزسئڝحق؃؃ڪكآحنؠكئسټئسحڝ؃زڪدآكنحقؠزئئټضس؃ڪڪزآ؃نكقحسؠضئحټ؃ضڪڪآزندقكسحئؠجئ؃ټحضآڪنزق؃سكئححؠدجڪآآضنڪقزسدئكحح؃نڝجآآآضقڪسزئ؃حك؃دڪنآجنآكضسڪئزح؃دقڪدآننجق");local P=(0x8a+-24)local l=80 local o=d;local e={}e={[(193/0xc1)]=function()local n,x,d,e=A(p,o,o+m);o=o+C;l=(l+(P*C))%r;return(((e+l-(P)+a*(C*s))%a)*((s*J)^s))+(((d+l-(P*s)+a*(s^m))%r)*(a*r))+(((x+l-(P*m)+J)%r)*a)+((n+l-(P*C)+J)%r);end,[(112-0x6e)]=function(e,e,e)local e=A(p,o,o);o=o+M;l=(l+(P))%r;return((e+l-(P)+J)%a);end,[(0x1d7/157)]=function()local e,d=A(p,o,o+s);l=(l+(P*s))%r;o=o+s;return(((d+l-(P)+a*(s*C))%a)*r)+((e+l-(P*s)+r*(s^m))%a);end,[(107-0x67)]=function(o,e,l)if l then local e=(o/s^(e-d))%s^((l-M)-(e-d)+M);return e-e%d;else local e=s^(e-M);return(o%(e+e)>=e)and d or g;end;end,[(65/0xd)]=function()local l=e[(-65+0x42)]();local o=e[(0xa6/166)]();local x=d;local n=(e[(-104+0x6c)](o,M,L+C)*(s^(L*s)))+l;local l=e[(0x2f-43)](o,21,31);local e=((-d)^e[(-0x7f+131)](o,32));if(l==g)then if(n==y)then return e*g;else l=M;x=y;end;elseif(l==(a*(s^m))-M)then return(n==g)and(e*(M/y))or(e*(g/y));end;return R(e,l-((r*(C))-d))*(x+(n/(s^z)));end,[(0x6a+-100)]=function(n,x,x)local x;if(not n)then n=e[(5/0x5)]();if(n==g)then return'';end;end;x=Q(p,o,o+n-d);o=o+n;local e=''for o=M,#x do e=V(e,G((A(Q(x,o,o))+l)%r))l=(l+P)%a end return e;end}local function p(...)return{...},W('#',...)end local function Q()local i={};local n={};local l={};local c={i,n,nil,l};local o={}local b=(90+-0x42)local a={[(0x234/188)]=(function(l)return not(#l==e[(-0x43+69)]())end),[((0x113-150)-0x79)]=(function(l)return e[(845/0xa9)]()end),[(0/0x68)]=(function(l)return e[(0xea/39)]()end),[(99/0x63)]=(function(l)local d=e[(-0x48+(1950/0x19))]()local l=''local e=1 for o=1,#d do e=(e+b)%r l=V(l,G((A(d:sub(o,o))+e)%a))end return l end)};local l=e[(0xc3/195)]()for l=1,l do local e=e[(0x7c-122)]();local d;local e=a[e%((-0x2f+129)-0x42)];o[l]=e and e({});end;for n=1,e[(0x71+(-0x82+18))]()do local l=e[(-67+0x45)]();if(e[(-0x62+102)](l,d,M)==y)then local r=e[(356/0x59)](l,s,m);local a=e[(0x274/157)](l,C,s+C);local l={e[(315/0x69)](),e[(-16+0x13)](),nil,nil};local c={[((19+-0x5a)+0x47)]=function()l[_]=e[(98+-0x5f)]();l[j]=e[(127+-0x7c)]();end,[(0x73/115)]=function()l[U]=e[(70+-0x45)]();end,[(0xdc/110)]=function()l[U]=e[(-0x52+83)]()-(s^L)end,[(0x78-117)]=function()l[_]=e[(0x77-118)]()-(s^L)l[S]=e[(348/0x74)]();end};c[r]();if(e[(-0x48+76)](a,M,d)==M)then l[x]=o[l[k]]end if(e[(0x33-47)](a,s,s)==d)then l[f]=o[l[h]]end if(e[(0x6c-104)](a,m,m)==M)then l[B]=o[l[N]]end i[n]=l;end end;c[3]=e[(88+-0x56)]();for e=M,e[(31-0x1e)]()do n[e-M]=Q();end;return c;end;local function A(e,g,P)local y=e[s];local r=e[m];local e=e[d];return(function(...)local G={...};local L=W('#',...)-M;local a=e;local l=d;local o={};local r=r;local m=p local e=d e*=-1 local C=e;local J=y;local p={};local y={};for e=0,L do if(e>=r)then y[e-r]=G[e+M];else o[e]=G[e+d];end;end;local L=L-r+d local e;local r;while true do e=a[l];r=e[((916/0x4)/0xe5)];n=(10551069)while r<=(0x415c/178)do n-= n n=(12102292)while(0x36a/19)>=r do n-= n n=(1128468)while(0x32+-28)>=r do n-= n n=(6776370)while r<=(109+-0x63)do n-= n n=(154380)while(0x3b4/237)>=r do n-= n n=(5259375)while(46+-0x2d)>=r do n-= n n=(6087780)while r>(84+-0x54)do n-= n local r;local n;o[e[b]][e[O]]=o[e[j]];l=l+d;e=a[l];n=e[k]o[n](i(o,n+M,e[O]))l=l+d;e=a[l];n=e[w];r=o[e[O]];o[n+1]=r;o[n]=r[e[v]];l=l+d;e=a[l];o[e[k]]=e[f];l=l+d;e=a[l];n=e[c]o[n](i(o,n+M,e[O]))l=l+d;e=a[l];n=e[w];r=o[e[h]];o[n+1]=r;o[n]=r[e[N]];l=l+d;e=a[l];o[e[c]]={};l=l+d;e=a[l];o[e[k]][e[U]]=e[j];l=l+d;e=a[l];o[e[x]][e[f]]=e[u];break end while(n)/((2915+-0x7d))==2182 do local r;local n;n=e[w];r=o[e[O]];o[n+1]=r;o[n]=r[e[v]];l=l+d;e=a[l];o[e[b]]=o[e[_]][e[S]];l=l+d;e=a[l];o[e[w]]={};l=l+d;e=a[l];o[e[b]][e[h]]=e[N];l=l+d;e=a[l];o[e[c]][e[f]]=e[u];l=l+d;e=a[l];o[e[x]]=P[e[O]];l=l+d;e=a[l];o[e[x]]=o[e[U]][e[S]];l=l+d;e=a[l];o[e[D]]=e[t];l=l+d;e=a[l];o[e[c]]=e[_];l=l+d;e=a[l];o[e[k]]=e[U];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];o[e[k]][e[O]]=o[e[u]];l=l+d;e=a[l];n=e[b]o[n](i(o,n+M,e[h]))break end;break;end while(n)/((0xf44+-83))==1375 do n=(1673504)while(0x74+-114)>=r do n-= n local r;local n;o[e[w]][e[_]]=o[e[j]];l=l+d;e=a[l];n=e[b]o[n](i(o,n+M,e[h]))l=l+d;e=a[l];n=e[x];r=o[e[U]];o[n+1]=r;o[n]=r[e[B]];l=l+d;e=a[l];o[e[x]]={};l=l+d;e=a[l];o[e[b]]=P[e[O]];l=l+d;e=a[l];o[e[c]]=e[O];l=l+d;e=a[l];o[e[c]]=e[O];l=l+d;e=a[l];o[e[x]]=e[U];l=l+d;e=a[l];n=e[b]o[n]=o[n](i(o,n+d,e[O]))l=l+d;e=a[l];o[e[D]][e[_]]=o[e[j]];break;end while(n)/((0xd52+-36))==496 do n=(4897464)while(0x7e-123)<r do n-= n local t;local s,g;local n;local u;local r;o[e[b]]={};l=l+d;e=a[l];o[e[k]]=o[e[f]];l=l+d;e=a[l];o[e[w]]=e[h];l=l+d;e=a[l];o[e[k]]=o[e[h]];l=l+d;e=a[l];r=e[O];u=o[r]for e=r+1,e[j]do u=u..o[e];end;o[e[w]]=u;l=l+d;e=a[l];o[e[x]][e[U]]=o[e[N]];l=l+d;e=a[l];o[e[D]][e[f]]=e[B];l=l+d;e=a[l];o[e[w]]=P[e[_]];l=l+d;e=a[l];n=e[D];r=o[e[O]];o[n+1]=r;o[n]=r[e[v]];l=l+d;e=a[l];o[e[b]]=e[f];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];o[e[D]]=o[e[U]][e[v]];l=l+d;e=a[l];o[e[D]]=o[e[f]][e[S]];l=l+d;e=a[l];n=e[D];r=o[e[O]];o[n+1]=r;o[n]=r[e[S]];l=l+d;e=a[l];o[e[c]]=P[e[O]];l=l+d;e=a[l];o[e[k]]=o[e[h]];l=l+d;e=a[l];n=e[D]s,g=m(o[n](o[n+M]))C=g+n-d t=0;for e=n,C do t=t+d;o[e]=s[t];end;l=l+d;e=a[l];n=e[b]o[n](i(o,n+M,C))l=l+d;e=a[l];do return end;break end while(n)/((5736-0xb42))==1716 do local e=e[w];do return o[e](i(o,e+1,C))end;break end;break;end break;end break;end while(n)/((27900/0x2d))==249 do n=(4003072)while(-0x5b+98)>=r do n-= n n=(29984)while r<=((-0x5+-77)+0x57)do n-= n local n;o[e[k]]=P[e[U]];l=l+d;e=a[l];o[e[b]]=e[U];l=l+d;e=a[l];o[e[b]]=e[_];l=l+d;e=a[l];o[e[w]]=e[f];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[U]))l=l+d;e=a[l];if(o[e[b]]~=o[e[N]])then l=l+M;else l=e[f];end;break;end while 1874==(n)/((3056/0xbf))do n=(8982435)while(65-0x3b)<r do n-= n o[e[k]]=(e[f]~=0);break end while 2541==(n)/((0x72c8b/133))do local r;local n;o[e[D]][e[U]]=o[e[u]];l=l+d;e=a[l];n=e[w]o[n](i(o,n+M,e[h]))l=l+d;e=a[l];n=e[D];r=o[e[h]];o[n+1]=r;o[n]=r[e[j]];l=l+d;e=a[l];o[e[w]]=e[U];l=l+d;e=a[l];n=e[c]o[n](i(o,n+M,e[_]))l=l+d;e=a[l];n=e[w];r=o[e[O]];o[n+1]=r;o[n]=r[e[N]];l=l+d;e=a[l];o[e[b]]={};l=l+d;e=a[l];o[e[k]]=P[e[U]];l=l+d;e=a[l];o[e[c]]=e[U];l=l+d;e=a[l];o[e[D]]=e[f];break end;break;end break;end while(n)/((0x9ab-1259))==3292 do n=(13616666)while(-61+0x45)>=r do n-= n o[e[c]]=(e[_]~=0);l=l+M;break;end while(n)/((7650-0xf10))==3589 do n=(297118)while r>(31+-0x16)do n-= n local r;local n;o[e[x]]=o[e[U]];l=l+d;e=a[l];n=e[b];C=n+L-1;for e=n,C do r=y[e-n];o[e]=r;end;l=l+d;e=a[l];n=e[D];do return o[n](i(o,n+1,C))end;l=l+d;e=a[l];n=e[k];do return i(o,n,C)end;l=l+d;e=a[l];l=e[h];break end while(n)/((0x13294/28))==106 do local n;o[e[b]]=P[e[_]];l=l+d;e=a[l];o[e[b]]=e[O];l=l+d;e=a[l];o[e[w]]=e[_];l=l+d;e=a[l];o[e[b]]=e[h];l=l+d;e=a[l];n=e[k]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];o[e[x]]=P[e[f]];l=l+d;e=a[l];o[e[D]]=e[_];l=l+d;e=a[l];o[e[x]]=e[h];l=l+d;e=a[l];o[e[x]]=e[f];l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[f]))l=l+d;e=a[l];n=e[b]o[n](i(o,n+M,e[U]))break end;break;end break;end break;end break;end while(n)/((3591-0x730))==3870 do n=(1418025)while(-74+0x5a)>=r do n-= n n=(2380840)while(2587/0xc7)>=r do n-= n n=(641614)while(0x45+-58)>=r do n-= n local r;local n;o[e[c]]=g[e[h]];l=l+d;e=a[l];n=e[w];r=o[e[h]];o[n+1]=r;o[n]=r[e[u]];l=l+d;e=a[l];o[e[k]]={};l=l+d;e=a[l];o[e[k]][e[t]]=o[e[B]];l=l+d;e=a[l];o[e[w]][e[O]]=o[e[j]];l=l+d;e=a[l];o[e[b]][e[h]]=e[B];l=l+d;e=a[l];o[e[k]][e[U]]=e[B];l=l+d;e=a[l];n=e[c]o[n](i(o,n+M,e[t]))l=l+d;e=a[l];do return end;break;end while(n)/((-38+0xcd))==3842 do n=(4690254)while(146-0x86)<r do n-= n local d=o[e[v]];if not d then l=l+M;else o[e[w]]=d;l=e[t];end;break end while 2694==(n)/((-0x38+(3691-0x766)))do local S;local r;local C;local n;o[e[D]]=P[e[t]];l=l+d;e=a[l];o[e[b]]=o[e[_]][e[u]];l=l+d;e=a[l];n=e[c];C=o[e[h]];o[n+1]=C;o[n]=C[e[N]];l=l+d;e=a[l];o[e[k]]=o[e[f]];l=l+d;e=a[l];o[e[w]]=o[e[t]];l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[t]))l=l+d;e=a[l];n=e[D];C=o[e[_]];o[n+1]=C;o[n]=C[e[B]];l=l+d;e=a[l];n=e[x]o[n]=o[n](o[n+M])l=l+d;e=a[l];r={o,e};r[M][r[s][c]]=r[d][r[s][B]]+r[M][r[s][O]];l=l+d;e=a[l];o[e[D]]=o[e[h]]%e[B];l=l+d;e=a[l];n=e[x]o[n]=o[n](o[n+M])l=l+d;e=a[l];C=e[U];S=o[C]for e=C+1,e[v]do S=S..o[e];end;o[e[w]]=S;l=l+d;e=a[l];r={o,e};r[M][r[s][D]]=r[d][r[s][j]]+r[M][r[s][O]];l=l+d;e=a[l];o[e[c]]=o[e[U]]%e[v];break end;break;end break;end while(n)/(((0xbb198/98)-3955))==616 do n=(5396328)while(3500/0xfa)>=r do n-= n local r;local n;o[e[k]]=o[e[O]][e[B]];l=l+d;e=a[l];o[e[x]]=o[e[O]];l=l+d;e=a[l];n=e[b];C=n+L-1;for e=n,C do r=y[e-n];o[e]=r;end;l=l+d;e=a[l];n=e[x];do return o[n](i(o,n+1,C))end;l=l+d;e=a[l];n=e[x];do return i(o,n,C)end;break;end while 2709==(n)/((4032-0x7f8))do n=(637685)while r>(0x4f-64)do n-= n local n;o[e[D]]=P[e[_]];l=l+d;e=a[l];o[e[w]]=e[O];l=l+d;e=a[l];o[e[w]]=e[_];l=l+d;e=a[l];o[e[x]]=e[h];l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[O]))l=l+d;e=a[l];if(o[e[b]]==o[e[j]])then l=l+M;else l=e[_];end;break end while(n)/(((-11532/0x7c)+0x21a))==1433 do local r;local n;o[e[b]]=P[e[_]];l=l+d;e=a[l];o[e[c]]=e[U];l=l+d;e=a[l];o[e[x]]=e[O];l=l+d;e=a[l];o[e[c]]=e[_];l=l+d;e=a[l];n=e[b]o[n]=o[n](i(o,n+d,e[O]))l=l+d;e=a[l];n=e[D]o[n](i(o,n+M,e[U]))l=l+d;e=a[l];o[e[b]]=(e[U]~=0);l=l+d;e=a[l];g[e[t]]=o[e[c]];l=l+d;e=a[l];o[e[k]]=g[e[U]];l=l+d;e=a[l];n=e[w];r=o[e[f]];o[n+1]=r;o[n]=r[e[v]];l=l+d;e=a[l];o[e[w]]=o[e[t]][e[S]];l=l+d;e=a[l];o[e[w]]=o[e[t]][e[S]];l=l+d;e=a[l];o[e[D]]={};l=l+d;e=a[l];o[e[b]]=P[e[U]];l=l+d;e=a[l];o[e[c]]=e[_];l=l+d;e=a[l];o[e[w]]=e[h];l=l+d;e=a[l];o[e[w]]=e[t];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[t]))l=l+d;e=a[l];o[e[D]][e[U]]=o[e[u]];l=l+d;e=a[l];o[e[k]]=P[e[_]];l=l+d;e=a[l];o[e[w]]=e[O];l=l+d;e=a[l];o[e[k]]=e[U];l=l+d;e=a[l];o[e[k]]=e[O];l=l+d;e=a[l];n=e[b]o[n]=o[n](i(o,n+d,e[O]))l=l+d;e=a[l];o[e[D]][e[_]]=o[e[N]];l=l+d;e=a[l];o[e[D]]=P[e[U]];l=l+d;e=a[l];o[e[w]]=o[e[O]][e[B]];l=l+d;e=a[l];o[e[D]]=e[U];l=l+d;e=a[l];o[e[x]]=e[O];l=l+d;e=a[l];o[e[x]]=e[U];l=l+d;e=a[l];n=e[b]o[n]=o[n](i(o,n+d,e[h]))l=l+d;e=a[l];o[e[k]][e[h]]=o[e[j]];l=l+d;e=a[l];n=e[w]o[n](i(o,n+M,e[h]))break end;break;end break;end break;end while(n)/((0x1eaf-3970))==365 do n=(3935463)while(-70+0x59)>=r do n-= n n=(1772628)while r<=(112-0x5f)do n-= n local e=e[k];C=e+L-1;for l=e,C do local e=y[l-e];o[l]=e;end;break;end while 2066==(n)/((0x6d3-889))do n=(988291)while(-45+(0xd0b/53))<r do n-= n local d=o[e[S]];if not d then l=l+M;else o[e[c]]=d;l=e[_];end;break end while 643==(n)/((7685/0x5))do local e={o,e};e[M][e[s][k]]=e[d][e[s][j]]+e[M][e[s][t]];break end;break;end break;end while 1351==(n)/((0x6390c/140))do n=(35816)while((-98+-0x1b)+145)>=r do n-= n P[e[h]]=o[e[w]];break;end while(n)/((-0x66+250))==242 do n=(6731478)while(0x75+-96)<r do n-= n o[e[k]][e[h]]=o[e[j]];break end while(n)/((0xd64-1751))==4014 do local r;local n;o[e[w]][e[h]]=o[e[N]];l=l+d;e=a[l];n=e[c]o[n](i(o,n+M,e[_]))l=l+d;e=a[l];n=e[D];r=o[e[_]];o[n+1]=r;o[n]=r[e[v]];l=l+d;e=a[l];o[e[x]]={};l=l+d;e=a[l];o[e[k]]=P[e[_]];l=l+d;e=a[l];o[e[x]]=e[f];l=l+d;e=a[l];o[e[D]]=e[t];l=l+d;e=a[l];o[e[k]]=e[_];l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];o[e[c]][e[_]]=o[e[S]];break end;break;end break;end break;end break;end break;end while(n)/((1873-0x3c0))==1236 do n=(15764463)while(2754/0x51)>=r do n-= n n=(8738494)while r<=((388080/0x7e)/0x6e)do n-= n n=(2141722)while r<=((5972+-0x16)/238)do n-= n n=(11515635)while r<=((-17-0x13)+0x3b)do n-= n if(o[e[w]]~=o[e[u]])then l=l+M;else l=e[h];end;break;end while(n)/((-0x5e+3991))==2955 do n=(1208286)while(0x58-64)<r do n-= n local n;local r;local c,w;local b;local n;o[e[x]]=o[e[h]][e[S]];l=l+d;e=a[l];n=e[x];b=o[e[t]];o[n+1]=b;o[n]=b[e[v]];l=l+d;e=a[l];n=e[D]c,w=m(o[n](o[n+M]))C=w+n-d r=0;for e=n,C do r=r+d;o[e]=c[r];end;l=l+d;e=a[l];n=e[x]c={o[n](i(o,n+1,C))};r=0;for e=n,e[N]do r=r+d;o[e]=c[r];end l=l+d;e=a[l];l=e[U];break end while 3533==(n)/((735-0x189))do local n;o[e[D]]=e[_];l=l+d;e=a[l];o[e[k]]=e[_];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[f]))l=l+d;e=a[l];o[e[x]][e[_]]=o[e[u]];l=l+d;e=a[l];o[e[c]][e[h]]=e[u];break end;break;end break;end while(n)/(((0x3c7b5-123917)/0xa8))==2906 do n=(6197184)while r<=(-35+0x3d)do n-= n local n;o[e[w]]=e[f];l=l+d;e=a[l];o[e[x]]=e[_];l=l+d;e=a[l];o[e[x]]=e[U];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];if(o[e[w]]~=o[e[v]])then l=l+M;else l=e[h];end;break;end while 2088==(n)/((-0x40+3032))do n=(3591844)while r>(0x13d4/188)do n-= n local r;local n;o[e[b]][e[U]]=o[e[S]];l=l+d;e=a[l];n=e[w]o[n](i(o,n+M,e[f]))l=l+d;e=a[l];n=e[b];r=o[e[h]];o[n+1]=r;o[n]=r[e[S]];l=l+d;e=a[l];o[e[k]]=e[h];l=l+d;e=a[l];n=e[x]o[n](i(o,n+M,e[h]))l=l+d;e=a[l];n=e[k];r=o[e[_]];o[n+1]=r;o[n]=r[e[N]];l=l+d;e=a[l];o[e[D]]={};l=l+d;e=a[l];o[e[x]]=P[e[O]];l=l+d;e=a[l];o[e[w]]=e[O];l=l+d;e=a[l];o[e[x]]=e[O];break end while 2027==(n)/((-0x11+1789))do local r;local n;o[e[x]]();l=l+d;e=a[l];n=e[c];r=o[e[_]];o[n+1]=r;o[n]=r[e[S]];l=l+d;e=a[l];o[e[k]]=P[e[t]];l=l+d;e=a[l];o[e[k]]=e[h];l=l+d;e=a[l];o[e[b]]=e[_];l=l+d;e=a[l];o[e[D]]=e[t];l=l+d;e=a[l];n=e[b]o[n]=o[n](i(o,n+d,e[f]))l=l+d;e=a[l];n=e[k]o[n]=o[n](i(o,n+d,e[h]))l=l+d;e=a[l];if o[e[w]]then l=l+d;else l=e[O];end;break end;break;end break;end break;end while(n)/((3600+-0x6a))==2501 do n=(7124450)while(74+(-0x13+-24))>=r do n-= n n=(401400)while((0x95-89)+-0x1f)>=r do n-= n o[e[k]]=g[e[t]];l=l+d;e=a[l];o[e[w]][e[h]]=o[e[j]];l=l+d;e=a[l];o[e[c]]=g[e[t]];l=l+d;e=a[l];o[e[c]][e[O]]=o[e[B]];l=l+d;e=a[l];o[e[w]]=g[e[_]];l=l+d;e=a[l];o[e[b]][e[_]]=o[e[S]];l=l+d;e=a[l];o[e[D]]=g[e[t]];l=l+d;e=a[l];o[e[c]][e[O]]=o[e[v]];l=l+d;e=a[l];o[e[k]]=g[e[t]];l=l+d;e=a[l];o[e[D]][e[U]]=o[e[N]];l=l+d;e=a[l];do return end;break;end while(n)/((529+-0x53))==900 do n=(1548648)while r>(6000/0xc8)do n-= n if o[e[w]]then l=l+d;else l=e[O];end;break end while 1644==(n)/((0x7d9-1067))do o[e[w]][e[_]]=e[B];break end;break;end break;end while 3202==(n)/((0x3b35d/109))do n=(924480)while r<=(0x1e20/241)do n-= n do return end;break;end while(n)/((-0x4e+318))==3852 do n=(7415478)while r>(142-0x6d)do n-= n local e=e[b]o[e](i(o,e+M,C))break end while 2313==(n)/((-73+0xccf))do local d=e[k];local a=o[d]local n=o[d+2];if(n>0)then if(a>o[d+1])then l=e[U];else o[d+3]=a;end elseif(a<o[d+1])then l=e[U];else o[d+3]=a;end break end;break;end break;end break;end break;end while(n)/((383802/0x5e))==3861 do n=(3796065)while r<=(161+-0x79)do n-= n n=(753280)while r<=(5994/0xa2)do n-= n n=(5707849)while(4025/0x73)>=r do n-= n local l=e[k];local d=o[e[t]];o[l+1]=d;o[l]=d[e[j]];break;end while(n)/((4296-0x877))==2681 do n=(1834640)while r>((13175-0x19df)/182)do n-= n local n;o[e[w]]=P[e[h]];l=l+d;e=a[l];o[e[x]]=e[f];l=l+d;e=a[l];o[e[b]]=e[f];l=l+d;e=a[l];o[e[x]]=e[f];l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];if(o[e[x]]~=o[e[N]])then l=l+M;else l=e[h];end;break end while 680==(n)/((-17+0xa9b))do local e=e[b];do return o[e](i(o,e+1,C))end;break end;break;end break;end while 880==(n)/((0x85c0/40))do n=(140315)while r<=(0x1dfc/202)do n-= n local r;local n;o[e[b]]();l=l+d;e=a[l];n=e[c];r=o[e[h]];o[n+1]=r;o[n]=r[e[j]];l=l+d;e=a[l];o[e[w]]=P[e[h]];l=l+d;e=a[l];o[e[x]]=e[_];l=l+d;e=a[l];o[e[w]]=e[f];l=l+d;e=a[l];o[e[c]]=e[O];l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];n=e[x]o[n]=o[n](i(o,n+d,e[O]))l=l+d;e=a[l];if not o[e[x]]then l=l+M;else l=e[U];end;break;end while(n)/((1454-0x315))==211 do n=(2488905)while r>(-104+(-79+0xde))do n-= n o[e[c]]=o[e[U]]-o[e[u]];break end while 1349==(n)/((3736-0x763))do local r;local n;n=e[D]o[n](i(o,n+M,e[h]))l=l+d;e=a[l];o[e[c]]=P[e[U]];l=l+d;e=a[l];o[e[k]]=o[e[f]][e[S]];l=l+d;e=a[l];o[e[x]]=o[e[O]][e[B]];l=l+d;e=a[l];n=e[w];r=o[e[U]];o[n+1]=r;o[n]=r[e[v]];break end;break;end break;end break;end while 1053==(n)/((7285-0xe60))do n=(9699761)while(167-0x7c)>=r do n-= n n=(5387470)while r<=(0xbe-149)do n-= n o[e[c]]={};break;end while(n)/((0x24b4c/102))==3655 do n=(14068065)while r>(197-0x9b)do n-= n local e=e[k]o[e]=o[e](o[e+M])break end while 3795==(n)/((804419/0xd9))do local d=e[w];local n=o[d+2];local a=o[d]+n;o[d]=a;if(n>0)then if(a<=o[d+1])then l=e[_];o[d+3]=a;end elseif(a>=o[d+1])then l=e[U];o[d+3]=a;end break end;break;end break;end while(n)/((4827-0x998))==4091 do n=(734804)while r<=(0x2890/236)do n-= n P[e[O]]=o[e[x]];l=l+d;e=a[l];o[e[D]]={};l=l+d;e=a[l];o[e[c]]={};l=l+d;e=a[l];P[e[f]]=o[e[D]];l=l+d;e=a[l];o[e[c]]=P[e[O]];l=l+d;e=a[l];if(o[e[w]]==e[v])then l=l+M;else l=e[t];end;break;end while 1141==(n)/((702+-0x3a))do n=(8738848)while r>(149+-0x68)do n-= n o[e[x]]=o[e[f]][e[S]];break end while(n)/((3230+-0x52))==2776 do o[e[b]]=g[e[h]];l=l+d;e=a[l];o[e[x]]=#o[e[t]];l=l+d;e=a[l];g[e[_]]=o[e[c]];l=l+d;e=a[l];o[e[k]]=g[e[_]];l=l+d;e=a[l];o[e[w]]=#o[e[_]];l=l+d;e=a[l];g[e[t]]=o[e[D]];l=l+d;e=a[l];do return end;break end;break;end break;end break;end break;end break;end break;end while(n)/(((-55+-0x3)+3287))==3748 do n=(7834320)while r<=(0xca-132)do n-= n n=(4194212)while r<=(0x59+-31)do n-= n n=(3523080)while(0xd1-157)>=r do n-= n n=(5080790)while(69+-0x14)>=r do n-= n n=(8952888)while r<=((0x1e0-289)-0x90)do n-= n local n;o[e[D]][e[O]]=e[j];l=l+d;e=a[l];o[e[b]][e[O]]=e[N];l=l+d;e=a[l];o[e[b]]=P[e[O]];l=l+d;e=a[l];o[e[D]]=o[e[_]][e[B]];l=l+d;e=a[l];o[e[k]]=e[f];l=l+d;e=a[l];o[e[b]]=e[f];l=l+d;e=a[l];o[e[c]]=e[O];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[U]))l=l+d;e=a[l];o[e[D]][e[f]]=o[e[S]];break;end while(n)/((4627-0x945))==3972 do n=(13931070)while r>(0xd9-169)do n-= n o[e[x]]=g[e[U]];l=l+d;e=a[l];o[e[k]][e[t]]=o[e[B]];l=l+d;e=a[l];o[e[c]]=g[e[_]];l=l+d;e=a[l];o[e[w]][e[h]]=o[e[B]];l=l+d;e=a[l];o[e[c]]=g[e[O]];l=l+d;e=a[l];o[e[k]][e[h]]=o[e[B]];l=l+d;e=a[l];o[e[w]]=g[e[f]];l=l+d;e=a[l];o[e[w]][e[h]]=o[e[S]];l=l+d;e=a[l];do return end;break end while 3495==(n)/(((0x64064/100)+-0x6f))do o[e[w]][o[e[O]]]=o[e[S]];break end;break;end break;end while(n)/((0x7ab75/185))==1870 do n=(370230)while r<=(150-0x64)do n-= n g[e[f]]=o[e[c]];break;end while 574==(n)/((0xd3a4/(16884/0xc9)))do n=(13900628)while r>(127-(15428/0xcb))do n-= n local d=e[t];local l=o[d]for e=d+1,e[B]do l=l..o[e];end;o[e[w]]=l;break end while(n)/((497352/0x8a))==3857 do local r;local n;o[e[b]][e[O]]=o[e[S]];l=l+d;e=a[l];n=e[k]o[n](i(o,n+M,e[_]))l=l+d;e=a[l];n=e[c];r=o[e[U]];o[n+1]=r;o[n]=r[e[v]];l=l+d;e=a[l];o[e[w]]={};l=l+d;e=a[l];o[e[x]]=P[e[h]];l=l+d;e=a[l];o[e[w]]=e[h];l=l+d;e=a[l];o[e[c]]=e[f];l=l+d;e=a[l];o[e[k]]=e[h];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[U]))l=l+d;e=a[l];o[e[x]][e[_]]=o[e[B]];break end;break;end break;end break;end while(n)/((204600/0x9b))==2669 do n=(5569470)while(120+-0x41)>=r do n-= n n=(11171751)while r<=(0x86+-81)do n-= n local n;o[e[c]]=e[t];l=l+d;e=a[l];o[e[x]]=P[e[t]];l=l+d;e=a[l];o[e[b]]=e[O];l=l+d;e=a[l];o[e[c]]=e[f];l=l+d;e=a[l];o[e[D]]=e[f];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];n=e[k]o[n](i(o,n+M,e[h]))break;end while(n)/((0x1725-3024))==3851 do n=(3307488)while r>(117+-0x3f)do n-= n local n;local r;local x,h;local c;local n;o[e[D]]=o[e[O]][e[B]];l=l+d;e=a[l];n=e[k];c=o[e[f]];o[n+1]=c;o[n]=c[e[v]];l=l+d;e=a[l];n=e[b]x,h=m(o[n](o[n+M]))C=h+n-d r=0;for e=n,C do r=r+d;o[e]=x[r];end;l=l+d;e=a[l];n=e[k]x={o[n](i(o,n+1,C))};r=0;for e=n,e[B]do r=r+d;o[e]=x[r];end l=l+d;e=a[l];l=e[_];break end while(n)/((0x8a7-1167))==3156 do local n;o[e[w]]=o[e[U]][e[u]];l=l+d;e=a[l];o[e[b]]=P[e[t]];l=l+d;e=a[l];o[e[c]]=e[h];l=l+d;e=a[l];o[e[b]]=e[t];l=l+d;e=a[l];o[e[b]]=e[U];l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[t]))l=l+d;e=a[l];if(o[e[w]]==o[e[N]])then l=l+M;else l=e[h];end;break end;break;end break;end while 3257==(n)/((1834+-0x7c))do n=(5131348)while(0x64+-44)>=r do n-= n local r;local n;o[e[c]][e[_]]=e[j];l=l+d;e=a[l];o[e[c]]=P[e[f]];l=l+d;e=a[l];o[e[x]]=o[e[t]][e[N]];l=l+d;e=a[l];o[e[k]]=o[e[h]][e[N]];l=l+d;e=a[l];o[e[x]]=o[e[U]][e[u]];l=l+d;e=a[l];n=e[x];r=o[e[t]];o[n+1]=r;o[n]=r[e[j]];break;end while 1279==(n)/((0x1fc9-4125))do n=(6873414)while r>(12882/0xe2)do n-= n local r;local n;n=e[w]o[n](i(o,n+M,e[t]))l=l+d;e=a[l];n=e[c];r=o[e[O]];o[n+1]=r;o[n]=r[e[N]];l=l+d;e=a[l];o[e[b]]=e[f];l=l+d;e=a[l];n=e[x]o[n](i(o,n+M,e[t]))l=l+d;e=a[l];n=e[c];r=o[e[f]];o[n+1]=r;o[n]=r[e[S]];l=l+d;e=a[l];o[e[x]]=P[e[U]];l=l+d;e=a[l];o[e[k]]=e[f];l=l+d;e=a[l];o[e[x]]=e[_];l=l+d;e=a[l];o[e[x]]=e[O];l=l+d;e=a[l];n=e[b]o[n]=o[n](i(o,n+d,e[f]))break end while(n)/((370488/0xac))==3191 do o[e[w]]=P[e[_]];break end;break;end break;end break;end break;end while(n)/((0xd24+-77))==1276 do n=(8633418)while(5824/0x5b)>=r do n-= n n=(2859958)while(0xb6-121)>=r do n-= n n=(10973070)while r<=(205-0x92)do n-= n o[e[x]]=e[O];break;end while 3565==(n)/(((-24084/0xdf)+3186))do n=(1696032)while r>(155-0x5f)do n-= n o[e[c]]=o[e[_]]%e[j];break end while 3744==(n)/((962-0x1fd))do o[e[w]]=#o[e[U]];break end;break;end break;end while(n)/((0xe9a-1921))==1574 do n=(2705778)while((0x156-183)+-97)>=r do n-= n o[e[c]]=o[e[t]][e[u]];break;end while(n)/((-36+0x345))==3378 do n=(4371520)while(-0x4c+139)<r do n-= n P[e[U]]=o[e[b]];break end while 1438==(n)/((0x1831-3153))do local r;local n;n=e[b];r=o[e[O]];o[n+1]=r;o[n]=r[e[v]];l=l+d;e=a[l];o[e[b]]=P[e[t]];l=l+d;e=a[l];o[e[k]]=e[h];l=l+d;e=a[l];o[e[x]]=e[O];l=l+d;e=a[l];o[e[k]]=e[U];l=l+d;e=a[l];n=e[b]o[n]=o[n](i(o,n+d,e[U]))l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[U]))l=l+d;e=a[l];if not o[e[c]]then l=l+M;else l=e[U];end;break end;break;end break;end break;end while(n)/((0x1aa6-3464))==2571 do n=(7814041)while(0xe5-162)>=r do n-= n n=(558946)while r<=(0x73+-50)do n-= n local n;o[e[k]]=e[O];l=l+d;e=a[l];o[e[c]]=e[t];l=l+d;e=a[l];o[e[w]]=e[U];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[O]))l=l+d;e=a[l];if(o[e[b]]~=o[e[S]])then l=l+M;else l=e[t];end;break;end while(n)/((1362+(-0xd-15)))==419 do n=(126791)while r>(0xc6-132)do n-= n o[e[D]]();break end while(n)/((352436/0xa4))==59 do local e=e[c]o[e](o[e+M])break end;break;end break;end while 3547==(n)/((0x524a3/153))do n=(2815960)while(0xb8+-116)>=r do n-= n local r;local t,M;local w;local n;o[e[k]]=P[e[_]];l=l+d;e=a[l];n=e[c];w=o[e[_]];o[n+1]=w;o[n]=w[e[u]];l=l+d;e=a[l];o[e[k]]=P[e[O]];l=l+d;e=a[l];o[e[x]]=e[U];l=l+d;e=a[l];o[e[D]]=e[f];l=l+d;e=a[l];o[e[c]]=e[h];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];n=e[D]t,M=m(o[n](i(o,n+1,e[f])))C=M+n-1 r=0;for e=n,C do r=r+d;o[e]=t[r];end;l=l+d;e=a[l];n=e[k]o[n]=o[n](i(o,n+d,C))l=l+d;e=a[l];n=e[b]o[n]=o[n]()break;end while 3164==(n)/((1830-0x3ac))do n=(3031704)while r>(8280/0x78)do n-= n o[e[c]]=o[e[_]][o[e[v]]];break end while 3081==(n)/((-98+0x43a))do local e={o,e};e[d][e[s][D]]=e[s][v]+e[s][h];break end;break;end break;end break;end break;end break;end while 3348==(n)/((0x388ec/99))do n=(268200)while(0x8c+-58)>=r do n-= n n=(7041844)while r<=(0x9e+-82)do n-= n n=(372592)while r<=((0xa659/167)-182)do n-= n n=(3703050)while(247-0xb0)>=r do n-= n o[e[w]][o[e[t]]]=o[e[j]];break;end while(n)/((1163+-0x6c))==3510 do n=(2884640)while r>(0x83+-59)do n-= n o[e[c]]();break end while 1760==(n)/((-29+0x684))do local n;o[e[k]]=P[e[O]];l=l+d;e=a[l];o[e[b]]=e[U];l=l+d;e=a[l];o[e[D]]=e[t];l=l+d;e=a[l];o[e[k]]=e[t];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[U]))l=l+d;e=a[l];o[e[w]]=P[e[O]];l=l+d;e=a[l];o[e[b]]=e[O];l=l+d;e=a[l];o[e[w]]=e[h];l=l+d;e=a[l];o[e[x]]=e[O];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[U]))l=l+d;e=a[l];n=e[D]o[n](i(o,n+M,e[O]))break end;break;end break;end while(n)/((-37+0x86a))==176 do n=(12796920)while(153+-0x4f)>=r do n-= n o[e[D]]=e[_];break;end while 3690==(n)/((7008-0xdd4))do n=(299968)while(17400/0xe8)<r do n-= n local n;o[e[k]]=P[e[t]];l=l+d;e=a[l];o[e[D]]=e[U];l=l+d;e=a[l];o[e[b]]=e[U];l=l+d;e=a[l];o[e[b]]=e[_];l=l+d;e=a[l];n=e[D]o[n]=o[n](i(o,n+d,e[U]))l=l+d;e=a[l];if(o[e[D]]~=o[e[N]])then l=l+M;else l=e[U];end;break end while(n)/((0x4b40/28))==436 do local e=e[b];local l=o[e];for e=e+1,C do Y(l,o[e])end;break end;break;end break;end break;end while(n)/((3003+-0x40))==2396 do n=(1795248)while(-64+0x8f)>=r do n-= n n=(8700105)while((16234+-0x40)/0xd2)>=r do n-= n local r;local n;o[e[k]][e[h]]=o[e[u]];l=l+d;e=a[l];n=e[D]o[n](i(o,n+M,e[_]))l=l+d;e=a[l];n=e[k];r=o[e[f]];o[n+1]=r;o[n]=r[e[j]];l=l+d;e=a[l];o[e[b]]=e[_];l=l+d;e=a[l];n=e[w]o[n](i(o,n+M,e[f]))l=l+d;e=a[l];n=e[w];r=o[e[t]];o[n+1]=r;o[n]=r[e[j]];l=l+d;e=a[l];o[e[x]]={};l=l+d;e=a[l];o[e[b]]=P[e[_]];l=l+d;e=a[l];o[e[x]]=e[U];l=l+d;e=a[l];o[e[c]]=e[_];break;end while 3327==(n)/((0x148d-2646))do n=(11748462)while(0x3d8c/202)<r do n-= n local l=e[D]o[l](i(o,l+M,e[O]))break end while 3774==(n)/(((126100/0x14)-0xc78))do local l=e[c]o[l]=o[l](i(o,l+d,e[O]))break end;break;end break;end while 819==(n)/((0x1157-2247))do n=(2412722)while(-0x2c+124)>=r do n-= n local r;local n;o[e[k]]=P[e[O]];l=l+d;e=a[l];o[e[c]]=e[U];l=l+d;e=a[l];o[e[c]]=e[_];l=l+d;e=a[l];o[e[b]]=e[h];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];n=e[x]o[n](i(o,n+M,e[h]))l=l+d;e=a[l];o[e[k]]=g[e[U]];l=l+d;e=a[l];n=e[w];r=o[e[U]];o[n+1]=r;o[n]=r[e[B]];l=l+d;e=a[l];o[e[x]]=o[e[h]][e[j]];l=l+d;e=a[l];o[e[w]]={};l=l+d;e=a[l];o[e[b]][e[U]]=e[B];l=l+d;e=a[l];o[e[D]][e[_]]=e[B];l=l+d;e=a[l];o[e[b]]=P[e[f]];l=l+d;e=a[l];o[e[x]]=o[e[_]][e[B]];l=l+d;e=a[l];o[e[x]]=e[O];l=l+d;e=a[l];o[e[b]]=e[h];l=l+d;e=a[l];o[e[c]]=e[h];l=l+d;e=a[l];n=e[b]o[n]=o[n](i(o,n+d,e[h]))l=l+d;e=a[l];o[e[D]][e[t]]=o[e[N]];l=l+d;e=a[l];n=e[k]o[n](i(o,n+M,e[t]))l=l+d;e=a[l];l=e[U];break;end while 923==(n)/((-0x50+2694))do n=(8041844)while r>(0xd0-127)do n-= n local n;o[e[c]]=P[e[O]];l=l+d;e=a[l];o[e[D]]=e[h];l=l+d;e=a[l];o[e[b]]=e[_];l=l+d;e=a[l];o[e[x]]=e[O];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[O]))l=l+d;e=a[l];o[e[k]]=P[e[O]];l=l+d;e=a[l];o[e[c]]=e[_];l=l+d;e=a[l];o[e[k]]=e[f];l=l+d;e=a[l];o[e[b]]=e[O];l=l+d;e=a[l];n=e[c]o[n]=o[n](i(o,n+d,e[h]))l=l+d;e=a[l];n=e[b]o[n](i(o,n+M,e[f]))break end while(n)/((0x189f-3169))==2566 do local n;o[e[c]]=o[e[U]][e[S]];l=l+d;e=a[l];o[e[x]]=P[e[U]];l=l+d;e=a[l];o[e[D]]=e[h];l=l+d;e=a[l];o[e[c]]=e[t];l=l+d;e=a[l];o[e[c]]=e[_];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[h]))l=l+d;e=a[l];if(o[e[c]]~=o[e[u]])then l=l+M;else l=e[h];end;break end;break;end break;end break;end break;end while(n)/((0x3b10/210))==3725 do n=(12567875)while(13992/0x9f)>=r do n-= n n=(165672)while(-0x71+198)>=r do n-= n n=(18990)while r<=(8549/0x67)do n-= n local r;local n;n=e[b];r=o[e[U]];o[n+1]=r;o[n]=r[e[N]];l=l+d;e=a[l];o[e[x]]=o[e[O]][e[u]];l=l+d;e=a[l];o[e[c]]=o[e[_]][e[B]];l=l+d;e=a[l];o[e[b]]=o[e[h]][e[v]];l=l+d;e=a[l];o[e[w]]={};l=l+d;e=a[l];o[e[k]]=P[e[h]];l=l+d;e=a[l];o[e[x]]=e[f];l=l+d;e=a[l];o[e[b]]=e[O];l=l+d;e=a[l];o[e[c]]=e[U];l=l+d;e=a[l];n=e[w]o[n]=o[n](i(o,n+d,e[_]))l=l+d;e=a[l];o[e[c]][e[t]]=o[e[j]];l=l+d;e=a[l];o[e[D]]=P[e[U]];l=l+d;e=a[l];o[e[w]]=e[_];l=l+d;e=a[l];o[e[w]]=e[f];l=l+d;e=a[l];o[e[w]]=e[h];l=l+d;e=a[l];n=e[x]o[n]=o[n](i(o,n+d,e[f]))l=l+d;e=a[l];o[e[b]][e[h]]=o[e[v]];l=l+d;e=a[l];o[e[w]]=P[e[h]];l=l+d;e=a[l];o[e[b]]=o[e[h]][…"
+
+ https://eu15.proxysite.com/process.php?d=ZHy2L8OVx5PC2YRZxL8VvYZrH8r0rUxog3zDT74%3D&b=1&f=norefer#:~:text=if%20game.PlaceId,getfenv))())%20end)()%0Aend
